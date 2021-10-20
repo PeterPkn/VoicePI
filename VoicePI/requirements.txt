@@ -1,0 +1,4 @@
+#https://realpython.com/python-speech-recognition/#the-recognizer-class
+pyaudio
+pocketsphinx
+SpeechRecognition
