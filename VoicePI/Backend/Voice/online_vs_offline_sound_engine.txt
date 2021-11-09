@@ -1,0 +1,38 @@
+Test 1:
+<class 'speech_recognition.AudioData'>
+Online (Google): test test test test test
+Offline (Sphinx): the kids do this all through his men who knew
+
+Test 2:
+Online (Google): hello hello
+Offline (Sphinx): up a fair and graceful or who it panel and that often so the hello and move it but at the wall
+
+Test 3:
+Online (Google): Voice by Rick Astley of YouTube off
+Offline (Sphinx): what happened and it blew up by name was lying on a porch riordan and agreed as to your arm or o. o. her uno arm and will know law are urging you to who what's also grew to recapture was going through so much at home when all is in the cut out hope what else is as the days to the clue he led us all you call
+
+Test 4:
+listening...
+Online (Google): Brücke stehen die geheimnisvollen selbstverständlich
+Offline (Sphinx): you see the motley and jai news phone butler on me and rudy bingo her use your is low we raised a lot o' cheesy and you will be and he and the shuttle our were injured ratios low it usually ask me not izzy
+listening...
+Online (Google): Nebenberuf auf einem Weltbedeutung letzten Endes möchte ich sagen war ein strenger Lehrer erlebte mich Durchschlag Dokument sondern durch sein ganzes ausschließlich Aufrichtigkeit und Wahrheit und Natürlichkeit gerichtetes sei auf diesem Wege fand der viele Schwierigkeiten viele Hindernisse und deshalb
+Offline (Sphinx): d. n. a. in their rooms all under your tongue this air news reached on gloria i'm sure your arms and they are and the room she got star can go run lucia i goes cold fusion y'all were you crying when molly and not usually use uses are cohesion they hung the yeager in g. a. lose a finger tell me i'm here and there are one hughes tool coastal and asia lahore where you go to law at new york but where you were grossing gaines is in the higher the at powell's at yah babes on and will do ye are not allowed policies and that's it runs pfleger the eyeing the little rock prisons meetings in that crowd grew you met us doesn't he would not and the manner in june one that we return show us and you're gonna ruin the yours looks lethal dewey over our cars and let him by his own whose will work shows me oxy and usually who yearn for she and then all reshape the in lower east lynne lynne room remorse for your honor our oh it wound up in the limo you get out slave and what do you when you dream all hairy and nishi big
+listening...
+Google Speech didn't recognize anything (UnknownValueError)
+Offline (Sphinx): beyond the scope it leon lou and the aboud caucus and the greater your monitor bolts and he well who the real courage only to your married again her show and all associate or are sealed room henry call it is used all her pretty do you hate your her you're going to go to be male hungrily arts the mango are wrong and perched on the show and and i los you me for i really knew goons in mueller in the orange tree out how yet you heart me and her really bringing guns hoping whore in a legal her to the unruffled you see you hey you're order ha-ha engler is gloom are at murder the alcohol who out words we saw you see at collision at who are you you're years joie back to the room the mayor on the top one lazy ought to run around this young cop has these uni rugby union got i'm leon chung let alone won't use and a huge and lions on love and roll hall and his own values and all the
+
+Weitere Tests folgen. Vorläufige Erkenntnis: Nur in absoluten Notfällen auf die Offline Funktionen zurückfallen.
+
+
+
+
+Online (Google): hallo hallo hallo was ist Nico
+
+Offline (Sphinx): the high but this is a cruel to home rule cruel moan when osgood what it would have the are easily go and all grasses montgomery who are you in here and out of the and rude question how is this the end
+
+
+
+Online (Google): Hey Google
+
+Offline (Sphinx): warn the igloo you going over that
