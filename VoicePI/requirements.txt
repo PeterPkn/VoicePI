@@ -13,3 +13,4 @@ SpeechRecognition
 pafy
 vlc
 youtube_dl
+bs4 requests
