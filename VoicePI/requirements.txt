@@ -9,3 +9,7 @@ pyaudio
 pocketsphinx
 
 SpeechRecognition
+
+pafy
+vlc
+youtube_dl
