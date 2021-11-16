@@ -41,7 +41,7 @@ const MainMenu = () => {
 
             <div class="six">
                 <Paper style={divst}>
-                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>Silent Voice Mode</Typography></Button>
+                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>SilentMode</Typography></Button>
                 </Paper>
             </div>
             
