@@ -47,13 +47,13 @@ const MainMenu = () => {
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Funktion1</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Video/Audio</Typography></Button>
                 </Paper>
             </div>
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Funktion2</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter</Typography></Button>
                 </Paper>
             </div>
             
