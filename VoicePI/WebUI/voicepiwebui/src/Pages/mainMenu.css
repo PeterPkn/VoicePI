@@ -3,7 +3,7 @@
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap:5vh;
+    gap:2vh;
   }
   .one {
     grid-column: 1;
