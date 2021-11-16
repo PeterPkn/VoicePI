@@ -41,25 +41,25 @@ const MainMenu = () => {
 
             <div class="six">
                 <Paper style={divst}>
-                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>Silent Voice Mode</Typography></Button>
+                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>SilentMode</Typography></Button>
                 </Paper>
             </div>
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>SUS</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Video/Audio</Typography></Button>
                 </Paper>
             </div>
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>SUS</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter</Typography></Button>
                 </Paper>
             </div>
             
             <div class="sus">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>SUS</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Funktion3</Typography></Button>
                 </Paper>
             </div>
         </div>
