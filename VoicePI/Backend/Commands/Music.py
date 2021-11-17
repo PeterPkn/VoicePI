@@ -38,7 +38,8 @@ def play_video(url):
 
     time.sleep(10)
     while player.is_playing() == 1:
-        print(player.is_playing())
+        pass
+        #   print(player.is_playing())
 
     print(player.is_playing())
     player.stop()
@@ -50,5 +51,6 @@ def play_video(url):
 # url = "https://www.youtube.com/watch?v=S6R3MiAv9ac"
 
 #   urli = find_url("amogus")
-urli = find_url("eye of the tiger")
+"""urli = find_url("eye of the tiger")
 play_video(urli)
+"""

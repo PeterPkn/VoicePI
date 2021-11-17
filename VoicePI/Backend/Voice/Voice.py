@@ -1,5 +1,6 @@
 import speech_recognition as sr
 
+
 r = sr.Recognizer()
 
 mic = sr.Microphone()
@@ -22,7 +23,8 @@ def listen():
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
     print(result_google)
-
+    return result_google
+"""
     print("attempting sphinx")
     try:
         text = r.recognize_sphinx(audio1, )
@@ -35,6 +37,6 @@ def listen():
     result = f"{result_google}\n\n{result_sphinx}\n------------------------------\n\n"
     logfile.write(result)
     return result
+"""
 
-
-print(listen())
+# print(listen())
