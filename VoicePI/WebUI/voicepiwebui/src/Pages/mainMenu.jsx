@@ -24,6 +24,15 @@ const MainMenu = () => {
         amogus.play();
     };
 
+    const [fetchdata, setFetchData] = useState(null);
+
+    Promise.all([
+        fetch(`http://127.0.0.1:5000/1`)
+            .then((response) => response.json())
+            .then((data) =>setFetchData(data['1']))
+    ]);
+
+
     return(
         <div class="wrapper">
           
@@ -53,7 +62,7 @@ const MainMenu = () => {
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter</Typography></Button>
+                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter {fetchdata}</Typography></Button>
                 </Paper>
             </div>
             
