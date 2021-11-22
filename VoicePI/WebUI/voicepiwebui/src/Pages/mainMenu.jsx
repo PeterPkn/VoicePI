@@ -26,12 +26,16 @@ const MainMenu = () => {
 
     const [fetchdata, setFetchData] = useState(null);
 
-    Promise.all([
-        fetch(`http://127.0.0.1:5000/1`)
-            .then((response) => response.json())
-            .then((data) =>setFetchData(data['1']))
-    ]);
 
+    try{
+        Promise.all([
+            fetch(`http://127.0.0.1:5000/1`)
+                .then((response) => response.json())
+                .then((data) =>setFetchData(data['1']))
+        ]);    
+    }catch(exc){
+        setFetchData();
+    }
 
     return(
         <div class="wrapper">
