@@ -35,7 +35,7 @@ const MainMenu = () => {
             
             <div class="two">
                 <Paper style={divst}>
-                    <Button startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>ImageDisplay</Typography></Button>
+                    <Button onClick={() => navigate("/image")} startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>ImageDisplay</Typography></Button>
                 </Paper>
             </div>
 
@@ -59,7 +59,7 @@ const MainMenu = () => {
             
             <div class="sus">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Funktion3</Typography></Button>
+                    <Button onClick={() => navigate("/help")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Help</Typography></Button>
                 </Paper>
             </div>
         </div>
