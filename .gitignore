@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+VoicePI/Backend/Voice/voice_tests.txt
+
+.idea/

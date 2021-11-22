@@ -1,47 +1,42 @@
 import speech_recognition as sr
-# unter Windows: pip install pipwin --> dann "pipwin install pocketsphinx"
-import pocketsphinx
+
 
 r = sr.Recognizer()
 
-"""sound = sr.AudioFile('testsound.wav')
-with sound as source:
-    audio = r.record(source)"""
-
-"""print("Offline Audio Test 1: ")
-print(r.recognize_sphinx(audio))
-print("Offline Audio Test 2: ")
-print(r.recognize_sphinx(audio))
-print("Offline Audio Test 3: ")
-print(r.recognize_sphinx(audio))
-print("Offline Audio Test 4: ")
-print(r.recognize_sphinx(audio))"""
-
-# print("Online Audio Test 1:")
-# print(r.recognize_google(audio))
-
-
 mic = sr.Microphone()
-#   with mic as source:
-#       audio1 = r.listen(source)
 
-#   print(type(audio1))
-while True:
+logfile = open('voice_tests.txt', 'a')
+
+
+def listen():
+    result_google = ""
+    result_sphinx = ""
     print("listening...")
     with mic as source:
         audio1 = r.listen(source)
-
-    #   print(type(audio1))
+    print("listening finished")
+        #   print(type(audio1))
+    print("attempting google")
     try:
-        print("Online (Google): " + r.recognize_google(audio1, language="de-DE"))
+        text = r.recognize_google(audio1, language="de-DE")
+        result_google = f"Online (Google): {text}"
     except sr.UnknownValueError:
-        print("Google Speech didn't recognize anything (UnknownValueError)")
-
+        result_google = "Google Speech didn't recognize anything (UnknownValueError)"
+    print(result_google)
+    return result_google
+"""
+    print("attempting sphinx")
     try:
-        print("Offline (Sphinx): " + r.recognize_sphinx(audio1))
+        text = r.recognize_sphinx(audio1, )
+        print(text)
+        result_sphinx = f"Offline (Sphinx): {text}"
     except sr.UnknownValueError:
-        print("Pocketsphinx didn't recognize anything (UnknownValueError)")
+        result_sphinx = "Pocketsphinx didn't recognize anything (UnknownValueError)"
+    print(result_sphinx)
 
-#   if there is no standard mic:
-#   print(sr.Microphone.list_microphone_names())
-#   mic = sr.Microphone(device_index=2)
+    result = f"{result_google}\n\n{result_sphinx}\n------------------------------\n\n"
+    logfile.write(result)
+    return result
+"""
+
+# print(listen())

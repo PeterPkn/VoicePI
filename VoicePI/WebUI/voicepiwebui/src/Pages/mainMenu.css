@@ -1,0 +1,32 @@
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:2vh;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .sus {
+    grid-column: 3;
+    grid-row: 2;
+  }
