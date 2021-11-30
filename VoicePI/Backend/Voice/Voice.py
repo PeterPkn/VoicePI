@@ -39,4 +39,4 @@ def listen():
     return result
 """
 
-# print(listen())
+print(listen())
