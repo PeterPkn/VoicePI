@@ -15,18 +15,24 @@ def find_url(name):
 
 
 def play_video(url):
-    try:
-        video = pafy.new(url)
-        duration = video.duration
-    except KeyError:
-        print("dIsLiKeCoUnT")
-        play_video(url)
+    print("play_video")
+    print(f"url: {url}")
+    video = None
+    while video is None:
+        try:
+            video = pafy.new(url)
+            duration = video.duration
+            print(f"Metadata: \n{video}")
+        except KeyError:
+            print("KeyError, Trying again")
+            video = None
+
     # ftr = [3600, 60, 1]
     # duration = sum([a * b for a, b in zip(ftr, map(int, duration.split(':')))])
-
+    print(f"Video: {video}")
     best = video.getbest()
     playurl = best.url
-    print(playurl)
+    print(f"Real-URL: {playurl}")
 
     Instance = vlc.Instance("-I dummy --no-video --aout=alsa --file-logging --logfile=vlc-log.txt --verbose 3")
     player = Instance.media_player_new()
@@ -41,16 +47,12 @@ def play_video(url):
         pass
         #   print(player.is_playing())
 
-    print(player.is_playing())
     player.stop()
-    # time.sleep(duration)
 
 
-# url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-# url = "https://www.youtube.com/watch?v=_LjN3UclYzU"
-# url = "https://www.youtube.com/watch?v=S6R3MiAv9ac"
+#urli = find_url("AMOGUS reapster")
+#urli = find_url("Radetzkymarsch")
+#urli = find_url("the Star treks monologue")
+#urli = find_url("ospf lyric")
 
-#   urli = find_url("amogus")
-"""urli = find_url("eye of the tiger")
-play_video(urli)
-"""
+#play_video(urli)
