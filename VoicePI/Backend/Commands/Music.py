@@ -47,6 +47,7 @@ def play_video(url):
         pass
         #   print(player.is_playing())
 
+    print("stopping player")
     player.stop()
 
 
