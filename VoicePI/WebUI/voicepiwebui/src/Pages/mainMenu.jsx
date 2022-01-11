@@ -15,11 +15,13 @@ const MainMenu = () => {
     const [State, setState] = useState(null);
 
     const [ip, setIP] = useState('None');
+    const [loading, setloading] = useState(true);
+
 
     const getData = async () => {
         const res = await axios.get('https://geolocation-db.com/json/')
-        console.log(res.data);
-        setIP(res.data.IPv4)
+        res.then(console.log(res.data))
+        .then(setIP(res.data.IPv4));
       }
 
 
@@ -29,69 +31,69 @@ const MainMenu = () => {
 
     const navigate = useNavigate();
 
-    let amogus = new Audio("https://srv4.onlymp3.net/download?file=8c61c2c8e24482eea2e2f8baef1863d0251003003&token=pm_iGsxePy1Wxc9WQ8L2xw&expires=1636486376148&s=rKgv3KeW3f6NjV3LtPXlqA");
 
     
-    useEffect( () => {
-        //passing getData method to the lifecycle method
-        getData()
     
-      }, [])
 
-    const playmogus = () => {
-        amogus.play();
-    };
+    
 
     const [fetchdata, setFetchData] = useState(null);
 
-    fetch(`http://127.0.0.1:5000/1`)
+    if(loading===true){
+    fetch(`http://127.0.0.1:5000/wetter`)
             .then((response) => response.json())
-            .then((data) =>setFetchData(data['1']))
-            .catch();
-
+            .then((data) =>setFetchData(data))
+            .then((data)=>console.log(fetchdata))
+            .then((data)=>setloading(false))
+            .catch((err)=>console.log(err));
+        }
 
     return(
-        <div class="wrapper">
+        <>
+        {!loading && <div class="wrapper">
             <div style={{position: 'fixed', top: 0, left: 0}}>
-                {ip}
+                {
+                    //ip + ':) ... ' + fetchdata.wetter
+                }
             </div>
           
             <div class="one">
                 <Paper style={divst}>
-                    <Button onClick={()=>{navigate("/webbrowser");}} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>Webbrowser</Typography> </Button>
+                    <Button onClick={()=>{navigate("/webbrowser");}} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>Webbrowser</Typography> </Button>
                 </Paper>
             </div>
             
             <div class="two">
                 <Paper style={divst}>
-                    <Button onClick={() => navigate("/image")} startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>ImageDisplay</Typography></Button>
+                    <Button onClick={() => navigate("/image")} startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>ImageDisplay</Typography></Button>
                 </Paper>
             </div>
 
             <div class="six">
                 <Paper style={divst}>
-                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>SilentMode</Typography></Button>
+                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h5'>SilentMode</Typography></Button>
                 </Paper>
             </div>
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Video/Audio</Typography></Button>
+                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Audio</Typography></Button>
                 </Paper>
             </div>
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter {fetchdata}</Typography></Button>
+                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Wetter</Typography></Button>
                 </Paper>
             </div>
             
             <div class="sus">
                 <Paper style={divst}>
-                    <Button onClick={() => navigate("/help")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Help</Typography></Button>
+                    <Button onClick={() => navigate("/help")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Help</Typography></Button>
                 </Paper>
             </div>
-        </div>
+        </div> }
+        </>
     );
 };
 

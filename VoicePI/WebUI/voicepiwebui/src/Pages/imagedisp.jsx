@@ -17,7 +17,7 @@ const images = [
   {
     label: 'Image 1',
     imgPath:
-      'https://via.placeholder.com/400x400?text=Hello!',
+      'https://via.placeholder.com/1600x900?text=Hello!',
   },
   {
     label: 'Image 2',
@@ -51,14 +51,14 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: '100%', flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
         sx={{
           display: 'flex',
           alignItems: 'center',
-          height: 50,
+          height: 100,
           pl: 2,
           bgcolor: 'background.default',
         }}
@@ -72,16 +72,16 @@ function SwipeableTextMobileStepper() {
         enableMouseEvents
       >
         {images.map((step, index) => (
-          <div key={step.label}>
+          <div key={step.label} style={{display:'flex', justifyContent:'center'}} >
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  maxHeight:'70vh',
                   display: 'block',
-                  maxWidth: 400,
+                  
                   overflow: 'hidden',
-                  width: '100%',
+                  maxWidth: '100%'
                 }}
                 src={step.imgPath}
                 alt={step.label}
