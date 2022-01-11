@@ -15,3 +15,5 @@ vlc
 youtube_dl
 #bs4 
 requests
+python_weather
+pycamera
