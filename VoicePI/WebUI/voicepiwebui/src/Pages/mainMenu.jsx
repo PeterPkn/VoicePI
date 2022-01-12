@@ -1,16 +1,19 @@
+import { Button, Paper, Typography } from "@material-ui/core";
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import ImageIcon from '@mui/icons-material/Image';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import LanguageIcon from '@mui/icons-material/Language';
 import * as React from 'react';
 import { useState } from 'react';
-import "./mainMenu.css";
-import { Typography, Button, Paper } from "@material-ui/core";
-import LanguageIcon  from '@mui/icons-material/Language';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
-import ImageIcon from '@mui/icons-material/Image';
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import { useNavigate } from 'react-router';
+import "./mainMenu.css";
+
 
 
 const MainMenu = () => {
-    const [State, setState] = useState(null);
+    const [loading, setloading] = useState(true);
+
+
 
     const divst = {height:"100%", width:"100%"};
 
@@ -18,64 +21,69 @@ const MainMenu = () => {
 
     const navigate = useNavigate();
 
-    let amogus = new Audio("https://srv4.onlymp3.net/download?file=8c61c2c8e24482eea2e2f8baef1863d0251003003&token=pm_iGsxePy1Wxc9WQ8L2xw&expires=1636486376148&s=rKgv3KeW3f6NjV3LtPXlqA");
 
-    const playmogus = () => {
-        amogus.play();
-    };
+    
+    
+
+    
 
     const [fetchdata, setFetchData] = useState(null);
 
-
-    try{
-        Promise.all([
-            fetch(`http://127.0.0.1:5000/1`)
-                .then((response) => response.json())
-                .then((data) =>setFetchData(data['1']))
-        ]);    
-    }catch(exc){
-        setFetchData();
-    }
+    if(loading===true){
+    fetch(`http://127.0.0.1:5000/wetter`)
+            .then((response) => response.json())
+            .then((data) =>setFetchData(data))
+            .then((data)=>console.log(fetchdata))
+            .then((data)=>setloading(false))
+            .catch((err)=>console.log(err));
+        }
 
     return(
-        <div class="wrapper">
+        <>
+        {!loading && <div class="wrapper">
+            <div style={{position: 'fixed', top: 0, left: 0}}>
+                {
+                    //ip + ':) ... ' + fetchdata.wetter
+                }
+            </div>
           
             <div class="one">
                 <Paper style={divst}>
-                    <Button onClick={()=>{navigate("/webbrowser");}} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>Webbrowser</Typography> </Button>
+                    <Button onClick={()=>{navigate("/webbrowser");}} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>Webbrowser</Typography> </Button>
                 </Paper>
             </div>
             
             <div class="two">
                 <Paper style={divst}>
-                    <Button onClick={() => navigate("/image")} startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h4'>ImageDisplay</Typography></Button>
+                    <Button onClick={() => navigate("/image")} startIcon={<ImageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>ImageDisplay</Typography></Button>
                 </Paper>
             </div>
 
             <div class="six">
                 <Paper style={divst}>
-                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h4'>SilentMode</Typography></Button>
+                    <Button onClick={() => navigate("/silentmode")} startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h5'>SilentMode</Typography></Button>
                 </Paper>
             </div>
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Video/Audio</Typography></Button>
+                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Audio</Typography></Button>
                 </Paper>
             </div>
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={playmogus} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Wetter {fetchdata}</Typography></Button>
+                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Wetter</Typography></Button>
                 </Paper>
             </div>
             
             <div class="sus">
                 <Paper style={divst}>
-                    <Button onClick={() => navigate("/help")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h4'>Help</Typography></Button>
+                    <Button onClick={() => navigate("/help")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Help</Typography></Button>
                 </Paper>
             </div>
-        </div>
+        </div> }
+        </>
     );
 };
 

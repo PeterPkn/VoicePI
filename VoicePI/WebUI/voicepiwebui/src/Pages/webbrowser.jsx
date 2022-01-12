@@ -1,7 +1,6 @@
+import { Button, Typography } from "@material-ui/core";
+import LanguageIcon from '@mui/icons-material/Language';
 import * as React from 'react';
-import { useState } from 'react';
-import { Typography, Button, Paper, Box } from "@material-ui/core";
-import LanguageIcon  from '@mui/icons-material/Language';
 import { useNavigate } from 'react-router';
 
 
@@ -22,7 +21,7 @@ function Webbrowser(){
                     Webbrowser
                 </Typography>
             </div>
-            <iframe style={{width:"100%", height:"100%"}} src="https://www.google.com/webhp?igu=1"></iframe>
+            <iframe title="Browser" style={{width:"100%", height:"100%"}} src="https://www.google.com/webhp?igu=1"></iframe>
 
         </div>
     );

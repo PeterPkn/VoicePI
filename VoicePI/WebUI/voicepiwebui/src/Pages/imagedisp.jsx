@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { Typography, Button, Divider, Box, MobileStepper, Paper } from "@material-ui/core";
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -17,7 +16,7 @@ const images = [
   {
     label: 'Image 1',
     imgPath:
-      'https://via.placeholder.com/400x400?text=Hello!',
+      'https://via.placeholder.com/1600x900?text=Hello!',
   },
   {
     label: 'Image 2',
@@ -51,14 +50,14 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: '100%', flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
         sx={{
           display: 'flex',
           alignItems: 'center',
-          height: 50,
+          height: 100,
           pl: 2,
           bgcolor: 'background.default',
         }}
@@ -72,16 +71,16 @@ function SwipeableTextMobileStepper() {
         enableMouseEvents
       >
         {images.map((step, index) => (
-          <div key={step.label}>
+          <div key={step.label} style={{display:'flex', justifyContent:'center'}} >
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  maxHeight:'70vh',
                   display: 'block',
-                  maxWidth: 400,
+                  
                   overflow: 'hidden',
-                  width: '100%',
+                  maxWidth: '100%'
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -130,7 +129,7 @@ function ImageDisp(){
 
 
     return(
-        <div style={{width:"100%", height:"90vh"}}>
+        <div style={{maxHeight:"90vh"}}>
             <div style={{display:"flex"}}>
                 <Button onClick={()=>{navigate('/')}} style={{minWidth:'100px', minHeight:'50px'}}>Back</Button>
                 <ImageIcon style={iconStyle}/>
@@ -139,7 +138,7 @@ function ImageDisp(){
                 </Typography>
             </div>
             <Divider></Divider>
-            <SwipeableTextMobileStepper style={{}}></SwipeableTextMobileStepper>
+            <SwipeableTextMobileStepper style={{maxHeight:"90vh"}}></SwipeableTextMobileStepper>
             
         </div>
 

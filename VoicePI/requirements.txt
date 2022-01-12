@@ -13,4 +13,7 @@ SpeechRecognition
 pafy
 vlc
 youtube_dl
-bs4 requests
+#bs4 
+requests
+python_weather
+pycamera

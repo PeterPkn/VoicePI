@@ -23,7 +23,27 @@ def listen():
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
     print(result_google)
-    return result_google
+
+    return standardize_voice_results(result_google)
+
+
+def standardize_voice_results(voice_data):
+    voice_data = voice_data.lower().split(" ")
+    data = {"key": "", "query": ""}
+    keylist_play = ["spiel", "spiele", "play"]
+    keylist_show = ["zeig", "zeige", "show"]
+    keylist = keylist_show + keylist_play
+
+    for key in keylist:
+        if key in voice_data:
+            data["key"] = "play"
+            query = ""
+            for item in voice_data[voice_data.index(key):]:
+                query += f" {item}"
+
+            data["query"] = query
+
+    return data
 """
     print("attempting sphinx")
     try:

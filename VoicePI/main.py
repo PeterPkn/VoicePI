@@ -1,10 +1,11 @@
 import Backend.Commands.Music as music
 import Backend.Voice.Voice as voice
+import Backend.Commands.Weather as weather
 
-voice_result = voice.listen().lower().split(" ")
-print(voice_result)
-
-if any(x in ["spiel", "spiele"] for x in voice_result):
-    url = music.find_url(voice_result[1])
+standardized_voice = voice.listen()
+if standardized_voice["key"] == "play":
+    url = music.find_url(f"{standardized_voice['query']} music")
+    print(f"Query: {standardized_voice['query']}")
     print(url)
     music.play_video(url)
+
