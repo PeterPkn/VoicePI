@@ -19,11 +19,11 @@ def play_video(url):
     print(f"url: {url}")
     video = None
     while video is None:
-        try:
+        #try:
             video = pafy.new(url)
             duration = video.duration
             print(f"Metadata: \n{video}")
-        except KeyError:
+        #except KeyError:
             print("KeyError, Trying again")
             video = None
 
