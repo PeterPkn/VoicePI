@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import json
+from time import sleep
 
-import threading
-
-from Music import find_url, play_video
+from Music import MusicPlayer
 
 
 
@@ -15,8 +14,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 # TODO: Wetter API, Silent Mode anfragen & Antworten
 
-def start_music(search):
-    play_video(find_url(search[5:]))
+def start_music(search, infos):
+    play_video(find_url(search[5:]), infos)
 
 
 @app.route('/wetter', methods=['GET'])
@@ -39,18 +38,21 @@ def update_record():
     # voice pi should handle the input and do whatever it needs to here, then the response should be sent out as text.
     #if contains amogus...
 
-    infos = ['',''] # pass this to the thread and then read the passed Metadata from here
 
     a_string = record['msg']
     matches = ["amogus", "among us", "sus", "sussy"]
 
-    th = threading.Thread(target=start_music, args=(a_string,))
-
+    
+    music = MusicPlayer(a_string)
     
     if 'play' in a_string:
-        th.start()
+        music.start()
         #while infos are not set, waitm, then return it all
-        return jsonify({'answ':f'Started playing: {a_string[5:]}'})
+        #while(infos[0] == ''):
+        #    print(infos)
+        #    sleep(0.1)
+        infos = music.getMetadata()
+        return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
     if any(x in a_string.lower() for x in matches):
         return jsonify({'answ':'You sussy baka.'})

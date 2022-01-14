@@ -16,6 +16,7 @@ export default function SilentMode(){
 
     function sendMessage(){
         if(inputRef.current.value !== ''){
+            setmessages(['VoicePI: ' + '...', 'YOU: ' + inputRef.current.value, ...messages]);
             
 
             fetch(`http://127.0.0.1:5000/silentmode`, {
