@@ -30,6 +30,7 @@ class MusicPlayer:
         
     
     def terminate(self):
+        print("User requested STOP")
         self._running = False
     
     def start(self):
@@ -72,7 +73,7 @@ class MusicPlayer:
         # ftr = [3600, 60, 1]
         # duration = sum([a * b for a, b in zip(ftr, map(int, duration.split(':')))])
         print(f"Video: {video}")
-        best = video.getbest()
+        best = video.getbestaudio()
         playurl = best.url
         print(f"Real-URL: {playurl}")
 
@@ -85,7 +86,7 @@ class MusicPlayer:
         player.play()
 
         time.sleep(10)
-        while player.is_playing() == 1:
+        while player.is_playing() == 1 and self._running:
             pass
             #   print(player.is_playing())
 
