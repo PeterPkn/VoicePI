@@ -40057,4 +40057,714 @@ X-Content-Type-Options: nosniff
 Server: gvs 1.0
 
 
-main error: ES_OUT_SET_(GROUP_)PCR  is called t
+main error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 1000 ms)
+main debug: ES_OUT_RESET_PCR called
+main debug: Buffering 0%
+mmdevice debug: state changed: 0
+mmdevice debug: state changed: 0
+wasapi debug: reset
+main debug: Buffering 25%
+main debug: Buffering 50%
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=3523249-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:15 GMT
+Expires: Sat, 15 Jan 2022 16:09:15 GMT
+Cache-Control: private, max-age=21239
+Content-Range: bytes 3523249-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13986211
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: Buffering 75%
+main debug: Buffering 100%
+main debug: Stream buffering done (1250 ms in 1718 ms)
+main debug: Decoder wait done in 0 ms
+main warning: playback way too early (-161271): playing silence
+main debug: inserting 7741 zeroes
+mmdevice debug: state changed: 1
+mmdevice debug: state changed: 1
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=3714128-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:18 GMT
+Expires: Sat, 15 Jan 2022 16:09:18 GMT
+Cache-Control: private, max-age=21236
+Content-Range: bytes 3714128-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13795332
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=3816601-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:20 GMT
+Expires: Sat, 15 Jan 2022 16:09:20 GMT
+Cache-Control: private, max-age=21234
+Content-Range: bytes 3816601-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13692859
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=3968741-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:23 GMT
+Expires: Sat, 15 Jan 2022 16:09:23 GMT
+Cache-Control: private, max-age=21231
+Content-Range: bytes 3968741-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13540719
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4084445-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:24 GMT
+Expires: Sat, 15 Jan 2022 16:09:24 GMT
+Cache-Control: private, max-age=21230
+Content-Range: bytes 4084445-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13425015
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 1049 ms)
+main debug: ES_OUT_RESET_PCR called
+main debug: Buffering 0%
+main debug: Buffering 23%
+main debug: Buffering 47%
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4202766-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:26 GMT
+Expires: Sat, 15 Jan 2022 16:09:26 GMT
+Cache-Control: private, max-age=21228
+Content-Range: bytes 4202766-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13306694
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: Buffering 71%
+main debug: Buffering 95%
+main debug: Stream buffering done (1250 ms in 1304 ms)
+main debug: Decoder wait done in 0 ms
+main warning: playback way too early (-140431): playing silence
+main debug: inserting 6740 zeroes
+mmdevice debug: state changed: 0
+mmdevice debug: state changed: 0
+wasapi debug: reset
+main warning: playback way too early (-162650): playing silence
+main debug: inserting 7807 zeroes
+mmdevice debug: state changed: 1
+mmdevice debug: state changed: 1
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4450134-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:29 GMT
+Expires: Sat, 15 Jan 2022 16:09:29 GMT
+Cache-Control: private, max-age=21225
+Content-Range: bytes 4450134-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 13059326
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4535689-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:31 GMT
+Expires: Sat, 15 Jan 2022 16:09:31 GMT
+Cache-Control: private, max-age=21223
+Content-Range: bytes 4535689-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12973771
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4623475-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:32 GMT
+Expires: Sat, 15 Jan 2022 16:09:32 GMT
+Cache-Control: private, max-age=21222
+Content-Range: bytes 4623475-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12885985
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4709188-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:34 GMT
+Expires: Sat, 15 Jan 2022 16:09:34 GMT
+Cache-Control: private, max-age=21220
+Content-Range: bytes 4709188-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12800272
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4804290-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:35 GMT
+Expires: Sat, 15 Jan 2022 16:09:35 GMT
+Cache-Control: private, max-age=21219
+Content-Range: bytes 4804290-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12705170
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4859949-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:36 GMT
+Expires: Sat, 15 Jan 2022 16:09:36 GMT
+Cache-Control: private, max-age=21218
+Content-Range: bytes 4859949-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12649511
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=4911380-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:37 GMT
+Expires: Sat, 15 Jan 2022 16:09:37 GMT
+Cache-Control: private, max-age=21217
+Content-Range: bytes 4911380-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12598080
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5019805-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:38 GMT
+Expires: Sat, 15 Jan 2022 16:09:38 GMT
+Cache-Control: private, max-age=21216
+Content-Range: bytes 5019805-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12489655
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5108038-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:39 GMT
+Expires: Sat, 15 Jan 2022 16:09:39 GMT
+Cache-Control: private, max-age=21215
+Content-Range: bytes 5108038-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12401422
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5195072-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:41 GMT
+Expires: Sat, 15 Jan 2022 16:09:41 GMT
+Cache-Control: private, max-age=21213
+Content-Range: bytes 5195072-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12314388
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5280937-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:42 GMT
+Expires: Sat, 15 Jan 2022 16:09:42 GMT
+Cache-Control: private, max-age=21212
+Content-Range: bytes 5280937-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12228523
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5335894-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:43 GMT
+Expires: Sat, 15 Jan 2022 16:09:43 GMT
+Cache-Control: private, max-age=21211
+Content-Range: bytes 5335894-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12173566
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
+main debug: resolving rr3---sn-4g5ednld.googlevideo.com ...
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Resource temporarily unavailable, try again.
+gnutls debug: TLS handshake: Success.
+gnutls debug:  - safe renegotiation (RFC5746) enabled
+gnutls debug:  - extended master secret (RFC7627) enabled
+gnutls debug:  - false start (RFC7918) enabled
+http debug: outgoing request:
+GET /videoplayback?expire=1642284494&ei=bvHiYa_BBciD1wLFsIPgDg&ip=81.217.98.248&id=o-AICCSU0Uo9o0r3Abo9vR2jaLsdEw353jEZGfI8o5Ij1U&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=y4TXXTdGm7e_BVqm9UH1CeIG&gir=yes&clen=17509460&ratebypass=yes&dur=273.020&lmt=1613039462599048&fexp=24001373,24007246&c=WEB&txp=1430434&n=As6Mzbt26vKnYlgG3kE2_&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgaYl1J1r7bhGN6UX-wgm8IGpqVtHyS2gAZB4yXHjm7PUCIQDC1PgJCC4tOcRv0xpOkVgij51Qp9yMsqatbh2UayjoGQ%3D%3D&redirect_counter=1&cm2rm=sn-35cxanpbo5a-8pxl7s&req_id=d2173b32c4b136e2&cms_redirect=yes&mh=bU&mm=29&mn=sn-4g5ednld&ms=rdu&mt=1642262733&mv=m&mvi=3&pl=20&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgUF6g_Ar5ZIzx0niZpSVfW1cCb1-u5eW0MT-9BIOMk1QCIEzq0T7O044i6XB1e8HEsFX6PXoOuR9SoAJSTkY0DDRu HTTP/1.1
+Host: rr3---sn-4g5ednld.googlevideo.com
+Accept: */*
+Accept-Language: de
+User-Agent: VLC/3.0.8 LibVLC/3.0.8
+If-Unmodified-Since: Thu, 11 Feb 2021 10:31:02 GMT
+Range: bytes=5442991-
+
+
+http debug: incoming response:
+HTTP/1.1 206 Partial Content
+Last-Modified: Thu, 11 Feb 2021 10:31:02 GMT
+Content-Type: video/mp4
+Date: Sat, 15 Jan 2022 16:09:44 GMT
+Expires: Sat, 15 Jan 2022 16:09:44 GMT
+Cache-Control: private, max-age=21210
+Content-Range: bytes 5442991-17509459/17509460
+Accept-Ranges: bytes
+Content-Length: 12066469
+Connection: close
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Vary: Origin
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Server: gvs 1.0
+
+
