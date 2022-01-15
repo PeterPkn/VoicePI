@@ -18,7 +18,7 @@ def listen():
     print("listening...")
     print(mic.list_microphone_names())
     with mic as source:
-        audio1 = r.listen(source)
+        audio1 = r.listen(source, timeout=5, phrase_time_limit=10)
     print("listening finished")
         #   print(type(audio1))
     print("attempting google")
