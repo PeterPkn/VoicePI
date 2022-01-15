@@ -9,11 +9,14 @@ logfile = open('voice_tests.txt', 'a')
 
 
 def listen():
+    
     result_google = ""
     result_sphinx = ""
     print("listening...")
+    print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:
-        audio1 = r.listen(source)
+        r.adjust_for_ambient_noise(mic, duration=1)
+        audio1 = r.listen(source, timeout=5, phrase_time_limit=10)
     print("listening finished")
         #   print(type(audio1))
     print("attempting google")

@@ -16,9 +16,9 @@ def listen():
     result_google = ""
     result_sphinx = ""
     print("listening...")
-    print(mic.list_microphone_names())
+    print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:
-        audio1 = r.listen(source, timeout=1, phrase_time_limit=5)
+        audio1 = r.listen(source, timeout=5, phrase_time_limit=10)
     print("listening finished")
         #   print(type(audio1))
     print("attempting google")
