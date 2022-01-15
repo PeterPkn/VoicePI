@@ -9,6 +9,7 @@ logfile = open('voice_tests.txt', 'a')
 
 
 def listen():
+    r.adjust_for_ambient_noise(mic, duration=5)
     result_google = ""
     result_sphinx = ""
     print("listening...")
