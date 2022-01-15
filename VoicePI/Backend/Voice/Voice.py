@@ -3,7 +3,7 @@ import speech_recognition as sr
 
 r = sr.Recognizer()
 
-mic = sr.Microphone()
+mic = sr.Microphone(sample_rate=44100)
 
 
 
