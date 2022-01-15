@@ -4,6 +4,7 @@ import json
 from time import sleep
 
 from Music import MusicPlayer
+from Voice import listen
 
 
 
@@ -56,6 +57,20 @@ def update_record():
 
     if any(x in a_string.lower() for x in matches):
         return jsonify({'answ':'You sussy baka.'})
+
+    if 'listen' in a_string:
+        req = listen()
+        print(req['query'])
+        music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
+        if 'play' in req or 'spiele' in req['query']:
+            music.start()
+            #while infos are not set, waitm, then return it all
+            #while(infos[0] == ''):
+            #    print(infos)
+            #    sleep(0.1)
+            infos = music.getMetadata()
+            return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+
 
 
     return jsonify({'answ':'VoicePI says haha funny lol'})
