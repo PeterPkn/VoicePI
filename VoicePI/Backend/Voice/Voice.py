@@ -5,6 +5,9 @@ r = sr.Recognizer()
 
 mic = sr.Microphone()
 
+print(mic.list_microphone_names())
+
+
 logfile = open('voice_tests.txt', 'a')
 
 
