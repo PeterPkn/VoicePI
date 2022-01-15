@@ -5,7 +5,7 @@ r = sr.Recognizer()
 
 mic = sr.Microphone()
 
-print(mic.list_microphone_names())
+
 
 
 logfile = open('voice_tests.txt', 'a')
@@ -16,6 +16,7 @@ def listen():
     result_google = ""
     result_sphinx = ""
     print("listening...")
+    print(mic.list_microphone_names())
     with mic as source:
         audio1 = r.listen(source)
     print("listening finished")
