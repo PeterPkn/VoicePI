@@ -1,7 +1,10 @@
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import json
 from time import sleep
+
+from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
 from Voice import listen
@@ -54,6 +57,10 @@ def update_record():
         #    sleep(0.1)
         infos = music.getMetadata()
         return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+
+    if 'stop' in a_string:
+        ThreadManager.StopAllMusic()
+        return jsonify({'answ':'Stopping all Music.'})
 
     if any(x in a_string.lower() for x in matches):
         return jsonify({'answ':'You sussy baka.'})
