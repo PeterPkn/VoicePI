@@ -43,7 +43,7 @@ def listen_in_bg():
     try:
         if stop_listening is not None:
             return
-    except error:
+    except UnboundLocalError:
         pass
     print("listening...")
     #print('Threshhold: ' + str(r.energy_threshold))
