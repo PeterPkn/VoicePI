@@ -61,6 +61,16 @@ def update_record():
         speak(f'Started playing: {infos[0]} from {infos[1]}')
         return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
+    if 'listen bg' in a_string:
+        if 'listen bg stop' in a_string:
+            try:
+                stop_listening()
+            except error:
+                print('Could not stop Background Listening!')
+            
+        listen_in_bg()
+        return jsonify({'answ':f'Listening is the Background'})
+
     if 'stop' in a_string:
         ThreadManager.StopAllMusic()
         speak('Stopping all Music.')
@@ -71,15 +81,6 @@ def update_record():
         return {'answ':a_string[5:]}
 
     
-    if 'listen bg' in a_string:
-        if 'listen bg stop' in a_string:
-            try:
-                stop_listening()
-            except error:
-                print('Could not stop Background Listening!')
-            
-        listen_in_bg()
-        return jsonify({'answ':f'Listening is the Background'})
 
 
     if 'listen' in a_string:
