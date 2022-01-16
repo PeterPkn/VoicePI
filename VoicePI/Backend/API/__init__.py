@@ -66,6 +66,7 @@ def update_record():
 
     if 'speak' in a_string:
         speak(a_string[5:])
+        return {'answ':a_string[5:]}
 
 
     if 'listen' in a_string:
