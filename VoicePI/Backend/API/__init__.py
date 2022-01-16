@@ -62,8 +62,9 @@ def update_record():
         ThreadManager.StopAllMusic()
         return jsonify({'answ':'Stopping all Music.'})
 
-    if any(x in a_string.lower() for x in matches):
-        return jsonify({'answ':'You sussy baka.'})
+    if 'speak' in a_string:
+        speak(a_string[5:])
+
 
     if 'listen' in a_string:
         req = listen()
@@ -77,10 +78,10 @@ def update_record():
             #    sleep(0.1)
             infos = music.getMetadata()
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
-    
-    if 'speak' in a_string:
-        speak(a_string[5:])
 
+    
+    if any(x in a_string.lower() for x in matches):
+        return jsonify({'answ':'You sussy baka.'})
 
 
     return jsonify({'answ':'VoicePI says haha funny lol'})
