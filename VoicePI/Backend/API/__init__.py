@@ -7,7 +7,7 @@ from time import sleep
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
-from Voice import listen
+from Voice import listen, speak
 
 
 
@@ -79,7 +79,7 @@ def update_record():
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
     
     if 'speak' in a_string:
-        
+        speak(a_string[5:])
 
 
 
