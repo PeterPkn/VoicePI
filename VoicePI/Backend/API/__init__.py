@@ -8,10 +8,13 @@ from time import sleep
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
-from Voice import listen, speak, listen_in_bg, stop_listening
+from Voice import listen, speak, listen_in_bg
 
 
+def func():
+    pass
 
+stop_listening = func
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
@@ -68,7 +71,7 @@ def update_record():
             except error:
                 print('Could not stop Background Listening!')
             
-        listen_in_bg()
+        stop_listening = listen_in_bg()
         return jsonify({'answ':f'Listening is the Background'})
 
     if 'stop' in a_string:
