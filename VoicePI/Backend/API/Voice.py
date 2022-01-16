@@ -7,6 +7,8 @@ r = sr.Recognizer()
 
 mic = sr.Microphone()
 
+stop_listening = None
+
 logfile = open('voice_tests.txt', 'a')
 
 def speak(speech):
@@ -24,6 +26,30 @@ def speak(speech):
 
     #Calls the Espeak TTS Engine to read aloud a Text
     call([cmd_beg+cmd_out+text+cmd_end], shell=True)
+
+def handle_phrase(self, audio1):
+    try:
+        text = r.recognize_google(audio1, language="de-DE")
+        result_google = f"Online (Google): {text}"
+    except sr.UnknownValueError:
+        result_google = "Google Speech didn't recognize anything (UnknownValueError)"
+    print(result_google)
+
+    return standardize_voice_results(result_google)
+
+
+def listen_in_bg():
+    if stop_listening is not None:
+        return
+    print("listening...")
+    #print('Threshhold: ' + str(r.energy_threshold))
+    with mic as source:
+        r.adjust_for_ambient_noise(mic, duration=1)
+
+    stop_listening = r.listen_in_background(mic, handle_phrase)
+
+    
+
 
 
 def listen():

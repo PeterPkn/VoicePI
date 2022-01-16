@@ -1,4 +1,5 @@
 
+from os import error
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import json
@@ -7,7 +8,7 @@ from time import sleep
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
-from Voice import listen, speak
+from Voice import listen, speak, listen_in_bg, stop_listening
 
 
 
@@ -48,6 +49,7 @@ def update_record():
 
     
     music = MusicPlayer(a_string)
+
     
     if 'play' in a_string:
         music.start()
@@ -83,6 +85,16 @@ def update_record():
             #    sleep(0.1)
             
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+    
+
+    if 'listen bg' in a_string:
+        if 'listen bg stop' in a_string:
+            try:
+                stop_listening()
+            except error:
+                print('Could not stop Background Listening!')
+            
+        listen_in_bg()
 
     
     if any(x in a_string.lower() for x in matches):
