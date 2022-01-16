@@ -70,6 +70,17 @@ def update_record():
         speak(a_string[5:])
         return {'answ':a_string[5:]}
 
+    
+    if 'listen bg' in a_string:
+        if 'listen bg stop' in a_string:
+            try:
+                stop_listening()
+            except error:
+                print('Could not stop Background Listening!')
+            
+        listen_in_bg()
+        return jsonify({'answ':f'Listening is the Background'})
+
 
     if 'listen' in a_string:
         req = listen()
@@ -85,16 +96,6 @@ def update_record():
             #    sleep(0.1)
             
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
-    
-
-    if 'listen bg' in a_string:
-        if 'listen bg stop' in a_string:
-            try:
-                stop_listening()
-            except error:
-                print('Could not stop Background Listening!')
-            
-        listen_in_bg()
 
     
     if any(x in a_string.lower() for x in matches):
