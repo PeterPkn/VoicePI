@@ -77,6 +77,9 @@ def update_record():
             #    sleep(0.1)
             infos = music.getMetadata()
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+    
+    if 'speak' in a_string:
+        
 
 
 
