@@ -7,7 +7,7 @@ r = sr.Recognizer()
 
 mic = sr.Microphone()
 
-#stop_listening = None
+stop_listening = None
 
 logfile = open('voice_tests.txt', 'a')
 
@@ -39,9 +39,7 @@ def handle_phrase(self, audio1):
 
 
 def listen_in_bg():
-    try:
-        stop_listening()
-    except:
+    if stop_listening is not None:
         return
     print("listening...")
     #print('Threshhold: ' + str(r.energy_threshold))
