@@ -72,13 +72,15 @@ def update_record():
         req = listen()
         print(req['query'])
         music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
+        infos = music.getMetadata()
+        speak(f'Started playing: {infos[0]} from {infos[1]}')
         if 'play' in req or 'spiele' in req['query']:
             music.start()
             #while infos are not set, waitm, then return it all
             #while(infos[0] == ''):
             #    print(infos)
             #    sleep(0.1)
-            infos = music.getMetadata()
+            
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
     
