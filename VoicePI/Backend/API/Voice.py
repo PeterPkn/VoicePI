@@ -1,3 +1,4 @@
+from os import error
 import speech_recognition as sr
 
 from num2words import num2words
@@ -39,8 +40,11 @@ def handle_phrase(self, audio1):
 
 
 def listen_in_bg():
-    if stop_listening is not None:
-        return
+    try:
+        if stop_listening is not None:
+            return
+    except error:
+        pass
     print("listening...")
     #print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:
