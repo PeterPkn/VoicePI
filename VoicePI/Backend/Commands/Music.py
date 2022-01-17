@@ -21,7 +21,6 @@ def play_video(url):
     while video is None:
         try:
             video = pafy.new(url)
-            duration = video.duration
             print(f"Metadata: \n{video}")
         except KeyError:
             print("KeyError, Trying again")
@@ -54,6 +53,6 @@ def play_video(url):
 #urli = find_url("AMOGUS reapster")
 #urli = find_url("Radetzkymarsch")
 #urli = find_url("the Star treks monologue")
-#urli = find_url("ospf lyric")
+urli = find_url("white friday")
 
-#play_video(urli)
+play_video(urli)
