@@ -1,16 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import MainMenu from './Pages/mainMenu';
 import Webbrowser from './Pages/webbrowser';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Help from './Pages/Help';
 import ImageDisp from './Pages/imagedisp';
+import SilentMode from './Pages/silentmode';
 
 
 
 function App() {
 
-  const rootElement = document.getElementById("root");
 
 
   return (
@@ -26,6 +25,7 @@ function App() {
             <Route path="/webbrowser" element={<Webbrowser/>} />
             <Route path="/help" element={<Help/>} />
             <Route path="/image" element={<ImageDisp/>} />
+            <Route path="/silentmode" element={<SilentMode/>} />
           </Routes>
         </BrowserRouter>
 

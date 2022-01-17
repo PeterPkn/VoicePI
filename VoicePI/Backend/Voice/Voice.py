@@ -1,3 +1,4 @@
+from time import sleep
 import speech_recognition as sr
 
 
@@ -5,18 +6,12 @@ r = sr.Recognizer()
 
 mic = sr.Microphone()
 
+
+
+
 logfile = open('voice_tests.txt', 'a')
 
-
-def listen():
-    result_google = ""
-    result_sphinx = ""
-    print("listening...")
-    with mic as source:
-        audio1 = r.listen(source)
-    print("listening finished")
-        #   print(type(audio1))
-    print("attempting google")
+def handle_phrase(self, audio1):
     try:
         text = r.recognize_google(audio1, language="de-DE")
         result_google = f"Online (Google): {text}"
@@ -25,6 +20,23 @@ def listen():
     print(result_google)
 
     return standardize_voice_results(result_google)
+
+
+def listen_in_bg():
+    print("listening...")
+    #print('Threshhold: ' + str(r.energy_threshold))
+    with mic as source:
+        r.adjust_for_ambient_noise(mic, duration=1)
+
+    stop_listening = r.listen_in_background(mic, handle_phrase)
+
+    sleep(30)
+
+    stop_listening()
+
+
+
+
 
 
 def standardize_voice_results(voice_data):
@@ -60,3 +72,4 @@ def standardize_voice_results(voice_data):
 """
 
 # print(listen())
+listen_in_bg()

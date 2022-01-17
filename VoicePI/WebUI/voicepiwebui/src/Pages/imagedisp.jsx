@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { Typography, Button, Divider, Box, MobileStepper, Paper } from "@material-ui/core";
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -130,7 +129,7 @@ function ImageDisp(){
 
 
     return(
-        <div style={{width:"100%", height:"90vh"}}>
+        <div style={{maxHeight:"90vh"}}>
             <div style={{display:"flex"}}>
                 <Button onClick={()=>{navigate('/')}} style={{minWidth:'100px', minHeight:'50px'}}>Back</Button>
                 <ImageIcon style={iconStyle}/>
@@ -139,7 +138,7 @@ function ImageDisp(){
                 </Typography>
             </div>
             <Divider></Divider>
-            <SwipeableTextMobileStepper style={{}}></SwipeableTextMobileStepper>
+            <SwipeableTextMobileStepper style={{maxHeight:"90vh"}}></SwipeableTextMobileStepper>
             
         </div>
 

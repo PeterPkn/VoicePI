@@ -1,28 +1,18 @@
-import * as React from 'react';
-import { useState, useEffect } from 'react';
-import "./mainMenu.css";
-import { Typography, Button, Paper } from "@material-ui/core";
-import LanguageIcon  from '@mui/icons-material/Language';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
-import ImageIcon from '@mui/icons-material/Image';
+import { Button, Paper, Typography } from "@material-ui/core";
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import ImageIcon from '@mui/icons-material/Image';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import LanguageIcon from '@mui/icons-material/Language';
+import * as React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import axios from 'axios'
+import "./mainMenu.css";
 
 
 
 const MainMenu = () => {
-    const [State, setState] = useState(null);
-
-    const [ip, setIP] = useState('None');
     const [loading, setloading] = useState(true);
 
-
-    const getData = async () => {
-        const res = await axios.get('https://geolocation-db.com/json/')
-        res.then(console.log(res.data))
-        .then(setIP(res.data.IPv4));
-      }
 
 
     const divst = {height:"100%", width:"100%"};
@@ -71,7 +61,7 @@ const MainMenu = () => {
 
             <div class="six">
                 <Paper style={divst}>
-                    <Button startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h5'>SilentMode</Typography></Button>
+                    <Button onClick={() => navigate("/silentmode")} startIcon={<KeyboardIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}}><Typography variant='h5'>SilentMode</Typography></Button>
                 </Paper>
             </div>
             
