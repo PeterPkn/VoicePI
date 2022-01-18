@@ -3,6 +3,7 @@ import speech_recognition as sr
 
 from num2words import num2words
 from subprocess import call
+import requests
 
 r = sr.Recognizer()
 
@@ -36,6 +37,9 @@ def handle_phrase(self, audio1):
     try:
         text = r.recognize_google(audio1, language="de-DE")
         result_google = f"Online (Google): {text}"
+        query = {'msg':text}
+        response = requests.get('http://127.0.0.1:5000/silentmode', params=query)
+        print(response.json())
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
     print(result_google)

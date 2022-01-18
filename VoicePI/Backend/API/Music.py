@@ -15,8 +15,10 @@ def find_url(name):
         format_url = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
 
         search_results = re.findall(r"watch\?v=(\S{11})", format_url.read().decode())
-        clip = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
-
+        try:
+            clip = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
+        except error:
+            return 'No CLIP found'
         print(clip)
         return clip
 
