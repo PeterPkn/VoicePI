@@ -41,6 +41,7 @@ def specific():
 
 @app.route('/silentmode', methods=['POST'])
 def update_record():
+    print(request.data)
     record = json.loads(request.data)
     
     # voice pi should handle the input and do whatever it needs to here, then the response should be sent out as text.
