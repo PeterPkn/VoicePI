@@ -1,6 +1,5 @@
+import time
 import pafy, vlc, time
-import re, requests, subprocess, urllib.parse, urllib.request
-from bs4 import BeautifulSoup
 import Searchengine
 
 
@@ -23,20 +22,20 @@ def play_video(url):
     playurl = best.url
     print(f"Real-URL: {playurl}")
 
-    Instance = vlc.Instance("-I dummy --aout=alsa --file-logging --logfile=vlc-log.txt --verbose 3")
+
+    Instance = vlc.Instance(f"-I dummy --aout=alsa --verbose 3")
     player = Instance.media_player_new()
     Media = Instance.media_new(playurl)
     Media.get_mrl()
 
     player.set_media(Media)
+    player.toggle_fullscreen()
     player.play()
 
     time.sleep(10)
     if player.is_playing() != 1:
         player.stop()
-        #   print(player.is_playing())
-
-    print("stopping player")
+        print("stopping player")
     
 
 urli = Searchengine.find_url("AMOGUS reapster")
