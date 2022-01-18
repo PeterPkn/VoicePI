@@ -38,6 +38,7 @@ class VideoPlayer:
 
     def getMetadata(self):
         try:
+            pafy.dump_cache()
             video = pafy.new(self.url)
             duration = video.duration
             print(f"Metadata: \n{video}")    
