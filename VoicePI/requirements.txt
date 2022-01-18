@@ -17,3 +17,4 @@ youtube_dl
 requests
 python_weather
 pycamera
+OpenCV3

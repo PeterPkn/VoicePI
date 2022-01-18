@@ -131,3 +131,4 @@ dmypy.json
 VoicePI/Backend/Voice/voice_tests.txt
 
 .idea/
+.vlc_logs/
