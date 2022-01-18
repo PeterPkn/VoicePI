@@ -1,4 +1,3 @@
-
 from os import error
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
@@ -8,6 +7,7 @@ from time import sleep
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
+from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 
 
@@ -89,10 +89,11 @@ def update_record():
     if 'listen' in a_string:
         req = listen()
         print(req['query'])
-        music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
-        infos = music.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
+        
         if 'play' in req or 'spiele' in req['query']:
+            music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
+            infos = music.getMetadata()
+            speak(f'Started playing: {infos[0]} from {infos[1]}')
             music.start()
             #while infos are not set, waitm, then return it all
             #while(infos[0] == ''):
@@ -100,6 +101,12 @@ def update_record():
             #    sleep(0.1)
             
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+
+        if 'show' in req or 'zeige' in req['query']:
+            video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
+            infos = video.getMetadata()
+            speak(f'Started playing: {infos[0]} from {infos[1]}')
+            video.start()
 
     
     if any(x in a_string.lower() for x in matches):
