@@ -20,7 +20,7 @@ def find_url(name):
         print(clip)
         return clip
 
-class MusicPlayer:
+class VideoPlayer:
 
 
         
@@ -34,7 +34,7 @@ class MusicPlayer:
         self._running = False
     
     def start(self):
-        th.AddMusicThread(self.play_video, (), self.terminate)
+        th.AddVideoThread(self.play_video, (), self.terminate)
 
     def getMetadata(self):
         try:
@@ -77,12 +77,13 @@ class MusicPlayer:
         playurl = best.url
         print(f"Real-URL: {playurl}")
 
-        Instance = vlc.Instance("-I dummy --no-video --aout=alsa --verbose 3")
+        Instance = vlc.Instance("-I dummy --aout=alsa --verbose 3")
         player = Instance.media_player_new()
         Media = Instance.media_new(playurl)
         Media.get_mrl()
 
         player.set_media(Media)
+        player.toggle_fullscreen()
         player.play()
 
         time.sleep(10)
