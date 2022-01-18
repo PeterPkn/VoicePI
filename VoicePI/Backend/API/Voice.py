@@ -1,4 +1,5 @@
 from cgi import test
+import json
 from os import error
 import speech_recognition as sr
 
@@ -38,7 +39,7 @@ def handle_phrase(self, audio1):
     try:
         text = r.recognize_google(audio1, language="de-DE")
         result_google = f"Online (Google): {text}"
-        response = requests.post('http://127.0.0.1:5000/silentmode', data={'msg': str(text)})
+        response = requests.post('http://127.0.0.1:5000/silentmode', data={'msg': json.dumps(text)})
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
     print(result_google)

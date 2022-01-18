@@ -103,7 +103,7 @@ def update_record():
             
             return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
-        if 'show' in req or 'zeige' in req['query']:
+        elif 'show' in req or 'zeige' in req['query']:
             video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
             infos = video.getMetadata()
             speak(f'Started playing: {infos[0]} from {infos[1]}')
