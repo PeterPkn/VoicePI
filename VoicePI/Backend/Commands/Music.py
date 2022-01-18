@@ -1,17 +1,8 @@
+import imp
 import pafy, vlc, time
 import re, requests, subprocess, urllib.parse, urllib.request
 from bs4 import BeautifulSoup
-
-
-def find_url(name):
-    query_string = urllib.parse.urlencode({"search_query": name})
-    format_url = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
-
-    search_results = re.findall(r"watch\?v=(\S{11})", format_url.read().decode())
-    clip = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
-
-    print(clip)
-    return clip
+import Searchengine
 
 
 def play_video(url):
@@ -19,10 +10,10 @@ def play_video(url):
     print(f"url: {url}")
     video = None
     while video is None:
-        #try:
+        try:
             video = pafy.new(url)
             print(f"Metadata: \n{video}")
-        #except KeyError:
+        except KeyError:
             print("KeyError, Trying again")
             video = None
 
@@ -53,6 +44,6 @@ def play_video(url):
 #urli = find_url("AMOGUS reapster")
 #urli = find_url("Radetzkymarsch")
 #urli = find_url("the Star treks monologue")
-urli = find_url("white friday")
+urli = Searchengine.find_url("white friday sabaton")
 
 play_video(urli)
