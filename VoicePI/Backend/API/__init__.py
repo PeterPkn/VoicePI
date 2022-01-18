@@ -108,7 +108,7 @@ def update_record():
             speak(f'Started playing: {infos[0]} from {infos[1]}')
             video.start()
 
-    if 'show' in req or 'zeige' in req['query']:
+    if 'show' in a_string or 'zeige' in a_string:
             video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
             infos = video.getMetadata()
             speak(f'Started playing: {infos[0]} from {infos[1]}')
