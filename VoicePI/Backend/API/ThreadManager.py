@@ -4,6 +4,7 @@ import threading
 class ThreadManager:
     AllThreads = []
     MusicThreads = []
+    VideoThreads = []
     
     @staticmethod
     def completeAllThreads():
@@ -24,5 +25,29 @@ class ThreadManager:
     @staticmethod
     def StopAllMusic():
         for thread in ThreadManager.MusicThreads:
+            print("SUS:")
+            thread[1]()
+
+    @staticmethod
+    def AddVideoThread(func, args, stopTh):
+        th = threading.Thread(target=func, args=args)
+        ThreadManager.VideoThreads.append((th, stopTh))
+        th.start()
+
+    @staticmethod
+    def StopAllVideos():
+        for thread in ThreadManager.VideoThreads:
+            print("SUS:")
+            thread[1]()
+
+    @staticmethod
+    def AddVideoThread(func, args, stopTh):
+        th = threading.Thread(target=func, args=args)
+        ThreadManager.VideoThreads.append((th, stopTh))
+        th.start()
+
+    @staticmethod
+    def StopAllVideos():
+        for thread in ThreadManager.VideoThreads:
             print("SUS:")
             thread[1]()
