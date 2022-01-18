@@ -108,6 +108,11 @@ def update_record():
             speak(f'Started playing: {infos[0]} from {infos[1]}')
             video.start()
 
+    if 'show' in req or 'zeige' in req['query']:
+            video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
+            infos = video.getMetadata()
+            speak(f'Started playing: {infos[0]} from {infos[1]}')
+            video.start()
     
     if any(x in a_string.lower() for x in matches):
         speak('You sussy baka!')
