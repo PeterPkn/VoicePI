@@ -3,13 +3,9 @@ import speech_recognition as sr
 
 
 r = sr.Recognizer()
-
 mic = sr.Microphone()
-
-
-
-
 logfile = open('voice_tests.txt', 'a')
+
 
 def handle_phrase(self, audio1):
     try:
@@ -35,10 +31,6 @@ def listen_in_bg():
     stop_listening()
 
 
-
-
-
-
 def standardize_voice_results(voice_data):
     voice_data = voice_data.lower().split(" ")
     data = {"key": "", "query": ""}
@@ -56,20 +48,7 @@ def standardize_voice_results(voice_data):
             data["query"] = query
 
     return data
-"""
-    print("attempting sphinx")
-    try:
-        text = r.recognize_sphinx(audio1, )
-        print(text)
-        result_sphinx = f"Offline (Sphinx): {text}"
-    except sr.UnknownValueError:
-        result_sphinx = "Pocketsphinx didn't recognize anything (UnknownValueError)"
-    print(result_sphinx)
 
-    result = f"{result_google}\n\n{result_sphinx}\n------------------------------\n\n"
-    logfile.write(result)
-    return result
-"""
 
 # print(listen())
 listen_in_bg()
