@@ -41,6 +41,7 @@ def specific():
 
 @app.route('/silentmode', methods=['POST'])
 def update_record():
+    print(request.data)
     record = json.loads(request.data)
     
     # voice pi should handle the input and do whatever it needs to here, then the response should be sent out as text.
@@ -108,8 +109,8 @@ def update_record():
             speak(f'Started playing: {infos[0]} from {infos[1]}')
             video.start()
 
-    if 'show' in req or 'zeige' in req['query']:
-            video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
+    if 'show' in a_string or 'zeige' in a_string:
+            video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))
             infos = video.getMetadata()
             speak(f'Started playing: {infos[0]} from {infos[1]}')
             video.start()
