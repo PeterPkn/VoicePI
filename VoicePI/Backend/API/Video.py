@@ -73,7 +73,7 @@ class VideoPlayer:
         # ftr = [3600, 60, 1]
         # duration = sum([a * b for a, b in zip(ftr, map(int, duration.split(':')))])
         print(f"Video: {video}")
-        best = video.getbestaudio()
+        best = video.getbest()
         playurl = best.url
         print(f"Real-URL: {playurl}")
 
