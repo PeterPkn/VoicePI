@@ -18,7 +18,7 @@ logfile = open('voice_tests.txt', 'a')
 
 def speak(speech):
         
-    cmd_beg= 'espeak '
+    cmd_beg= 'espeak -vde'
     cmd_end= ' | aplay /home/pi/Desktop/Text.wav  2>/dev/null' # To play back the stored .wav file and to dump the std errors to /dev/null
     cmd_out= '--stdout > /home/pi/Desktop/Text.wav ' # To store the voice file
 
