@@ -34,7 +34,7 @@ class MusicPlayer:
         self._running = False
     
     def start(self):
-        th.AddMusicThread(self.play_video, (), self.terminate)
+        th.AddMusicThread(self.play_video, (), self.terminate)<a<re.Aq
 
     def getMetadata(self):
         try:
