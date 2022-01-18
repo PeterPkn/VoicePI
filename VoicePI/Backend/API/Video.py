@@ -73,7 +73,7 @@ class VideoPlayer:
         # ftr = [3600, 60, 1]
         # duration = sum([a * b for a, b in zip(ftr, map(int, duration.split(':')))])
         print(f"Video: {video}")
-        best = video.getbestaudio()
+        best = video.getbest()
         playurl = best.url
         print(f"Real-URL: {playurl}")
 
@@ -93,11 +93,3 @@ class VideoPlayer:
 
         print("stopping player")
         player.stop()
-
-
-    #urli = find_url("AMOGUS reapster")
-    #urli = find_url("Radetzkymarsch")
-    #urli = find_url("the Star treks monologue")
-    #urli = find_url("ospf lyric")
-
-    #play_video(urli)

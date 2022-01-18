@@ -5,6 +5,7 @@ class ThreadManager:
     AllThreads = []
     MusicThreads = []
     VideoThreads = []
+    FaceTrackingThreads = []
     
     @staticmethod
     def completeAllThreads():
@@ -41,13 +42,13 @@ class ThreadManager:
             thread[1]()
 
     @staticmethod
-    def AddVideoThread(func, args, stopTh):
+    def AddFaceTrackingThread(func, args, stopTh):
         th = threading.Thread(target=func, args=args)
         ThreadManager.VideoThreads.append((th, stopTh))
         th.start()
 
     @staticmethod
-    def StopAllVideos():
+    def StopFaceTrackingVideos():
         for thread in ThreadManager.VideoThreads:
             print("SUS:")
             thread[1]()
