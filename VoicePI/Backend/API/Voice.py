@@ -38,7 +38,7 @@ def handle_phrase(self, audio1):
         text = r.recognize_google(audio1, language="de-DE")
         result_google = f"Online (Google): {text}"
         query = {'msg':text}
-        response = requests.get('http://127.0.0.1:5000/silentmode', params=query)
+        response = requests.post('http://127.0.0.1:5000/silentmode', params=query)
         print(response.json())
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
