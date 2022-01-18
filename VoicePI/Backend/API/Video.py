@@ -93,11 +93,3 @@ class VideoPlayer:
 
         print("stopping player")
         player.stop()
-
-
-    #urli = find_url("AMOGUS reapster")
-    #urli = find_url("Radetzkymarsch")
-    #urli = find_url("the Star treks monologue")
-    #urli = find_url("ospf lyric")
-
-    #play_video(urli)
