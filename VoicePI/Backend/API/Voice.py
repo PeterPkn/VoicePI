@@ -1,6 +1,7 @@
 from cgi import test
 import json
 from os import error
+import os
 import speech_recognition as sr
 
 from num2words import num2words
