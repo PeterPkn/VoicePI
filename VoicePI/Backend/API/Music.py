@@ -79,7 +79,7 @@ class MusicPlayer:
         playurl = best.url
         print(f"Real-URL: {playurl}")
 
-        Instance = vlc.Instance("-I dummy --no-video --aout=alsa --verbose 3")
+        Instance = vlc.Instance("-I dummy --no-video --aout=alsa")
         player = Instance.media_player_new()
         Media = Instance.media_new(playurl)
         Media.get_mrl()
