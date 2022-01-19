@@ -16,8 +16,8 @@ class Keyword:
     @staticmethod
     def findKeyword(msg):
         Keyword.ALL_Keywords.sort()
-        print(Keyword.ALL_Keywords[0].priority)
         for elem in Keyword.ALL_Keywords:
             if elem.keyword in msg:
+                print("You said: " + elem.keyword)
                 elem.action(msg)
                 return
