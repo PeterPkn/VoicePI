@@ -9,6 +9,7 @@ from ThreadManager import ThreadManager
 from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
+import Keyword
 
 
 def func():
@@ -39,86 +40,86 @@ def specific():
     
     return {'id_is':id}
 
+
+
+def playaction(a_string):
+    music = MusicPlayer(a_string)
+    music.start()
+    infos = music.getMetadata()
+    speak(f'Started playing: {infos[0]} from {infos[1]}')
+    return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+
+def listenbg(a_string):
+    if 'listen bg stop' in a_string:
+        try:
+            stop_listening()
+            return jsonify({'answ':f'Stopped Listening in the Background'})
+        except error:
+            print('Could not stop Background Listening!')
+            
+    stop_listening = listen_in_bg()
+    return jsonify({'answ':f'Listening in the Background'})
+
+def stop(a_string):
+    ThreadManager.StopAllMusic()
+    speak('Stopping all Music.')
+    return jsonify({'answ':'Stopping all Music.'})
+
+def speak(a_string):
+    speak(a_string[5:])
+    return {'answ':a_string[5:]}
+
+def listen_action(a_string):
+    req = listen()
+    print(req['query'])
+        
+    if 'play' in req or 'spiele' in req['query']:
+        music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
+        infos = music.getMetadata()
+        speak(f'Started playing: {infos[0]} from {infos[1]}')
+        music.start()
+            
+        return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+
+    elif 'show' in req or 'zeige' in req['query']:
+        video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
+        infos = video.getMetadata()
+        speak(f'Started playing: {infos[0]} from {infos[1]}')
+        video.start()
+
+def show(a_string):
+    video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))
+    infos = video.getMetadata()
+    speak(f'Started playing: {infos[0]} from {infos[1]}')
+    video.start()
+
+def sussy(a_string):
+    speak('You sussy baka!')
+    return jsonify({'answ':'You sussy baka.'})
+
+Keyword('play',playaction,1 )
+Keyword('spiele',playaction,1 )
+Keyword('listen bg',listenbg,2 )
+Keyword('stop',stop,3 )
+Keyword('speak',speak,4 )
+Keyword('listen',listen_action,5 )
+Keyword('show',show,6 )
+Keyword('zeige',show,6 )
+
+
+Keyword('sus',sussy,100 )
+Keyword('among us',sussy,100 )
+Keyword('amogus',sussy,100 )
+Keyword('sussy',sussy,100 )
+
 @app.route('/silentmode', methods=['POST'])
 def update_record():
     print(request.data)
     record = json.loads(request.data)
-    
-    # voice pi should handle the input and do whatever it needs to here, then the response should be sent out as text.
-    #if contains amogus...
-
 
     a_string = record['msg'].lower()
-    matches = ["amogus", "among us", "sus", "sussy"]
 
-    
-    music = MusicPlayer(a_string)
-
-    
-    if 'play' in a_string:
-        music.start()
-        #while infos are not set, waitm, then return it all
-        #while(infos[0] == ''):
-        #    print(infos)
-        #    sleep(0.1)
-        infos = music.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
-        return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
-
-    if 'listen bg' in a_string:
-        if 'listen bg stop' in a_string:
-            try:
-                stop_listening()
-            except error:
-                print('Could not stop Background Listening!')
-            
-        stop_listening = listen_in_bg()
-        return jsonify({'answ':f'Listening is the Background'})
-
-    if 'stop' in a_string:
-        ThreadManager.StopAllMusic()
-        speak('Stopping all Music.')
-        return jsonify({'answ':'Stopping all Music.'})
-
-    if 'speak' in a_string:
-        speak(a_string[5:])
-        return {'answ':a_string[5:]}
-
-    
-
-
-    if 'listen' in a_string:
-        req = listen()
-        print(req['query'])
-        
-        if 'play' in req or 'spiele' in req['query']:
-            music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
-            infos = music.getMetadata()
-            speak(f'Started playing: {infos[0]} from {infos[1]}')
-            music.start()
-            #while infos are not set, waitm, then return it all
-            #while(infos[0] == ''):
-            #    print(infos)
-            #    sleep(0.1)
-            
-            return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
-
-        elif 'show' in req or 'zeige' in req['query']:
-            video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
-            infos = video.getMetadata()
-            speak(f'Started playing: {infos[0]} from {infos[1]}')
-            video.start()
-
-    if 'show' in a_string or 'zeige' in a_string:
-            video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))
-            infos = video.getMetadata()
-            speak(f'Started playing: {infos[0]} from {infos[1]}')
-            video.start()
-    
-    if any(x in a_string.lower() for x in matches):
-        speak('You sussy baka!')
-        return jsonify({'answ':'You sussy baka.'})
-
+    Keyword.findKeyword(a_string)
 
     return jsonify({'answ':'VoicePI says haha funny lol'})
 
