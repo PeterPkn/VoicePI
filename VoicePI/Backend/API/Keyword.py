@@ -8,6 +8,7 @@ class Keyword:
         self.keyword = keyword
         self.action = action
         self.priority = priority
+        Keyword.ALL_Keywords.append(self)
     
     def __lt__(self, other):
         return self.priority < other.priority
