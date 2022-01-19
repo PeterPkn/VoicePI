@@ -12,35 +12,6 @@ from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
 
 
-def func():
-    pass
-
-stop_listening = func
-
-app = Flask(__name__)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
-
-# TODO: Wetter API, Silent Mode anfragen & Antworten
-
-def start_music(search, infos):
-    play_video(find_url(search[5:]), infos)
-
-
-@app.route('/wetter', methods=['GET'])
-def wetter():
-    return {'wetter': 'wetter'}
-
-@app.route('/specific', methods=['GET'])
-def specific():
-    if 'id' in request.args:
-        id = int(request.args['id'])
-    else:
-        return "Error: No id field provided. Please specify an id."
-    
-    return {'id_is':id}
-
-
 
 def play_action(a_string):
     music = MusicPlayer(a_string)
@@ -112,6 +83,36 @@ Keyword('sus',sussy_action,100 )
 Keyword('among us',sussy_action,100 )
 Keyword('amogus',sussy_action,100 )
 Keyword('sussy',sussy_action,100 )
+
+def func():
+    pass
+
+stop_listening = func
+
+app = Flask(__name__)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+# TODO: Wetter API, Silent Mode anfragen & Antworten
+
+def start_music(search, infos):
+    play_video(find_url(search[5:]), infos)
+
+
+@app.route('/wetter', methods=['GET'])
+def wetter():
+    return {'wetter': 'wetter'}
+
+@app.route('/specific', methods=['GET'])
+def specific():
+    if 'id' in request.args:
+        id = int(request.args['id'])
+    else:
+        return "Error: No id field provided. Please specify an id."
+    
+    return {'id_is':id}
+
+
 
 @app.route('/silentmode', methods=['POST'])
 def update_record():
