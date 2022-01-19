@@ -6,9 +6,6 @@ from time import sleep
 
 from ThreadManager import ThreadManager
 
-from Music import MusicPlayer
-from Video import VideoPlayer
-from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
 
 Keyword.createKeywords()
