@@ -8,9 +8,9 @@ from subprocess import call
 import requests
 
 from Keyword import Keyword
-import pyttsx3
 
-engine = pyttsx3.init()
+from gtts import gTTS
+
 
 r = sr.Recognizer()
 
@@ -26,8 +26,10 @@ logfile = open('voice_tests.txt', 'a')
 
 def speak(speech):
         
-    engine.say(speech)
-    engine.runAndWait()
+    myobj = gTTS(text=speech, lang='de', slow=False)
+    myobj.save("speech.mp3")
+    os.system("mpg321 speech.mp3")
+
 
 def handle_phrase(self, audio1):
     try:
