@@ -121,7 +121,7 @@ def update_record():
 
     Keyword.findKeyword(a_string)
 
-    return jsonify({'answ':'VoicePI says haha funny lol'})
+    return jsonify({'answ':'Not recognized Command.'})
 
 
 if __name__ == '__main__':
