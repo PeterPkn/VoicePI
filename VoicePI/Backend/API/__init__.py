@@ -42,14 +42,14 @@ def specific():
 
 
 
-def playaction(a_string):
+def play_action(a_string):
     music = MusicPlayer(a_string)
     music.start()
     infos = music.getMetadata()
     speak(f'Started playing: {infos[0]} from {infos[1]}')
     return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
-def listenbg(a_string):
+def listenbg_action(a_string):
     if 'listen bg stop' in a_string:
         try:
             stop_listening()
@@ -60,12 +60,12 @@ def listenbg(a_string):
     stop_listening = listen_in_bg()
     return jsonify({'answ':f'Listening in the Background'})
 
-def stop(a_string):
+def stop_action(a_string):
     ThreadManager.StopAllMusic()
     speak('Stopping all Music.')
     return jsonify({'answ':'Stopping all Music.'})
 
-def speak(a_string):
+def speak_action(a_string):
     speak(a_string[5:])
     return {'answ':a_string[5:]}
 
@@ -87,30 +87,30 @@ def listen_action(a_string):
         speak(f'Started playing: {infos[0]} from {infos[1]}')
         video.start()
 
-def show(a_string):
+def show_action(a_string):
     video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))
     infos = video.getMetadata()
     speak(f'Started playing: {infos[0]} from {infos[1]}')
     video.start()
 
-def sussy(a_string):
+def sussy_action(a_string):
     speak('You sussy baka!')
     return jsonify({'answ':'You sussy baka.'})
 
-Keyword('play',playaction,1 )
-Keyword('spiele',playaction,1 )
-Keyword('listen bg',listenbg,2 )
-Keyword('stop',stop,3 )
-Keyword('speak',speak,4 )
+Keyword('play',play_action,1 )
+Keyword('spiele',play_action,1 )
+Keyword('listen bg',listenbg_action,2 )
+Keyword('stop',stop_action,3 )
+Keyword('speak',speak_action,4 )
 Keyword('listen',listen_action,5 )
-Keyword('show',show,6 )
-Keyword('zeige',show,6 )
+Keyword('show',show_action,6 )
+Keyword('zeige',show_action,6 )
 
 
-Keyword('sus',sussy,100 )
-Keyword('among us',sussy,100 )
-Keyword('amogus',sussy,100 )
-Keyword('sussy',sussy,100 )
+Keyword('sus',sussy_action,100 )
+Keyword('among us',sussy_action,100 )
+Keyword('amogus',sussy_action,100 )
+Keyword('sussy',sussy_action,100 )
 
 @app.route('/silentmode', methods=['POST'])
 def update_record():
