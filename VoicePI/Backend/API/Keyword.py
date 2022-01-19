@@ -17,7 +17,7 @@ class Keyword:
     def findKeyword(msg):
         Keyword.ALL_Keywords.sort()
         for elem in Keyword.ALL_Keywords:
-            if elem.keyword in msg:
+            if elem.keyword in msg.lower():
                 print("You said: " + elem.keyword)
                 return elem.action(msg)
                 
