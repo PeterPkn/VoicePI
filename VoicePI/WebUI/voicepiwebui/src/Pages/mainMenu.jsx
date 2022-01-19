@@ -30,7 +30,7 @@ const MainMenu = () => {
     const [fetchdata, setFetchData] = useState(null);
 
     if(loading===true){
-    fetch(`http://127.0.0.1:5000/wetter`)
+    fetch(`http://192.168.1.10:5000/wetter`)
             .then((response) => response.json())
             .then((data) =>setFetchData(data))
             .then((data)=>console.log(fetchdata))

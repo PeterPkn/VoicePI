@@ -11,10 +11,10 @@ pocketsphinx
 SpeechRecognition
 
 pafy
-vlc
+python-vlc
 youtube_dl
 #bs4 
 requests
 python_weather
 pycamera
-OpenCV3
+opencv-python
