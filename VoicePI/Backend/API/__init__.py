@@ -119,9 +119,7 @@ def update_record():
 
     a_string = record['msg'].lower()
 
-    Keyword.findKeyword(a_string)
-
-    return jsonify({'answ':'Not recognized Command.'})
+    return Keyword.findKeyword(a_string)
 
 
 if __name__ == '__main__':

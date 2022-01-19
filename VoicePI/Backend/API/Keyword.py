@@ -19,5 +19,5 @@ class Keyword:
         for elem in Keyword.ALL_Keywords:
             if elem.keyword in msg:
                 print("You said: " + elem.keyword)
-                elem.action(msg)
-                return
+                return elem.action(msg)
+                
