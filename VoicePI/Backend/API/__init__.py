@@ -48,7 +48,7 @@ def update_record():
     #if contains amogus...
 
 
-    a_string = record['msg']
+    a_string = record['msg'].lower()
     matches = ["amogus", "among us", "sus", "sussy"]
 
     
