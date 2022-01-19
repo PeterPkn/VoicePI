@@ -9,7 +9,7 @@ from ThreadManager import ThreadManager
 from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
-import Keyword
+from Keyword import Keyword
 
 
 def func():
