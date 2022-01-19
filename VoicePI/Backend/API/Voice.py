@@ -41,6 +41,7 @@ def handle_phrase(self, audio1):
     try:
         text = r.recognize_google(audio1, language="de-DE")
         result_google = f"Online (Google): {text}"
+        print("Trying to find Action")
         Keyword.findKeyword(text)
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
@@ -57,7 +58,6 @@ def listen_in_bg():
             return
     except UnboundLocalError:
         stop_listening = func
-        pass
     print("listening...")
     #print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:

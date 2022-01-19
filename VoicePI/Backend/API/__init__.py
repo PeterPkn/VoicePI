@@ -62,7 +62,8 @@ def listenbg_action(a_string):
 
 def stop_action(a_string):
     ThreadManager.StopAllMusic()
-    speak('Stopping all Music.')
+    ThreadManager.StopAllVideos()
+    speak('Stopping all Music and Videos.')
     return jsonify({'answ':'Stopping all Music.'})
 
 def speak_action(a_string):

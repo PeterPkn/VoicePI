@@ -20,4 +20,5 @@ class Keyword:
             if elem.keyword in msg.lower():
                 print("You said: " + elem.keyword)
                 return elem.action(msg)
+        return {'answ':'No Action found!'}
                 
