@@ -18,6 +18,6 @@ class Keyword:
         Keyword.ALL_Keywords.sort()
         print(Keyword.ALL_Keywords[0].priority)
         for elem in Keyword.ALL_Keywords:
-            if elem in msg:
+            if elem.keyword in msg:
                 elem.action(msg)
                 return
