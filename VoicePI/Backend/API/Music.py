@@ -8,7 +8,6 @@ from ThreadManager import ThreadManager
 
 th = ThreadManager()
 
-#TODO: Rewrite to Class
 
 def find_url(name):
         query_string = urllib.parse.urlencode({"search_query": name})
