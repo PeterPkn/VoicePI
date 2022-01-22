@@ -116,6 +116,7 @@ class PorcupineDemo(Thread):
                     recorder.delete()
                     Keyword.findKeyword("listen")
                     print("Back to Porcupine.")
+                    recorder = PvRecorder(device_index=self._input_device_index, frame_length=porcupine.frame_length)
                     recorder.start()
 
 
