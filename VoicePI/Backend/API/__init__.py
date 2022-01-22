@@ -11,7 +11,7 @@ from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
 
-from porcupineDemo import main
+from porcupineDemo import getPorcupineInst
 
 
 
@@ -88,7 +88,9 @@ Keyword('amogus',sussy_action,100 )
 Keyword('sussy',sussy_action,100 )
 
 #main(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
+porcupine = getPorcupineInst(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
 
+porcupine.start()
 
 def func():
     pass

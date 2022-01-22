@@ -20,9 +20,12 @@ from threading import Thread
 
 from Keyword import Keyword
 
+from ThreadManager import ThreadManager
+
 import pvporcupine
 from pvrecorder import PvRecorder
 
+th = ThreadManager()
 
 class PorcupineDemo(Thread):
     """
@@ -40,6 +43,8 @@ class PorcupineDemo(Thread):
             sensitivities,
             input_device_index=None,
             output_path=None):
+
+        self._running = True
 
         """
         Constructor.
@@ -64,6 +69,13 @@ class PorcupineDemo(Thread):
         self._input_device_index = input_device_index
 
         self._output_path = output_path
+
+    def terminate(self):
+        print("User requested STOP")
+        self._running = False
+
+    def start(self):
+        th.AddPorcupineThread(self.run, (), self.terminate)
 
     def run(self):
         """
@@ -104,7 +116,7 @@ class PorcupineDemo(Thread):
                 print('  %s (%.2f)' % (keyword, sensitivity))
             print('}')
 
-            while True:
+            while True and self._running:
                 pcm = recorder.read()
 
                 if wav_file is not None:
@@ -165,7 +177,7 @@ class PorcupineDemo(Thread):
             print(f'index: {i}, device name: {devices[i]}')
 
 
-def main(access_key, keyword_paths):
+def getPorcupineInst(access_key, keyword_paths):
 
         if access_key is None:
             raise ValueError("AccessKey (--access_key) is required")
@@ -174,14 +186,14 @@ def main(access_key, keyword_paths):
 
         sensitivities = [0.5] * len(keyword_paths)
 
-        PorcupineDemo(
+        return PorcupineDemo(
             access_key=access_key,
             library_path=pvporcupine.LIBRARY_PATH,
             model_path=pvporcupine.MODEL_PATH,
             keyword_paths=keyword_paths,
             sensitivities=sensitivities,
             output_path=None,
-            input_device_index=-1).run()
+            input_device_index=-1)
 
 
 if __name__ == '__main__':

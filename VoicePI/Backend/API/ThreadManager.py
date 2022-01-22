@@ -6,6 +6,7 @@ class ThreadManager:
     MusicThreads = []
     VideoThreads = []
     FaceTrackingThreads = []
+    PorcupineThreads = []
     
     @staticmethod
     def completeAllThreads():
@@ -24,6 +25,12 @@ class ThreadManager:
         th.start()
 
     @staticmethod
+    def AddPorcupineThread(func, args, stopTh):
+        th = threading.Thread(target=func, args=args)
+        ThreadManager.PorcupineThreads.append((th, stopTh))
+        th.start()
+
+    @staticmethod
     def StopAllMusic():
         for thread in ThreadManager.MusicThreads:
             print("SUS:")
@@ -34,6 +41,12 @@ class ThreadManager:
         th = threading.Thread(target=func, args=args)
         ThreadManager.VideoThreads.append((th, stopTh))
         th.start()
+
+    @staticmethod
+    def StopAllPorcupine():
+        for thread in ThreadManager.PorcupineThreads:
+            print("SUS:")
+            thread[1]()
 
     @staticmethod
     def StopAllVideos():
