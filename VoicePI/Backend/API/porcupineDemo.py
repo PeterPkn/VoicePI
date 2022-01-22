@@ -114,19 +114,21 @@ class PorcupineDemo():
                 print('  %s (%.2f)' % (keyword, sensitivity))
             print('}')
 
-            while True and self._running:
-                pcm = recorder.read()
+            try:
+                while self._running:
+                    pcm = recorder.read()
 
-                if wav_file is not None:
-                    wav_file.writeframes(struct.pack("h" * len(pcm), *pcm))
+                    if wav_file is not None:
+                        wav_file.writeframes(struct.pack("h" * len(pcm), *pcm))
 
-                result = porcupine.process(pcm)
-                if result >= 0:
-                    print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
-                    porcupine.delete()
-                    Keyword.findKeyword("listen")
-                    print("Back to Porcupine.")
-                    
+                    result = porcupine.process(pcm)
+                    if result >= 0:
+                        print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
+                        porcupine.delete()
+                        Keyword.findKeyword("listen")
+                        print("Back to Porcupine.")
+            except:
+                print("ERROR")    
 
 
         except pvporcupine.PorcupineInvalidArgumentError as e:
