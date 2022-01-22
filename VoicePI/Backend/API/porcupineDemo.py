@@ -11,13 +11,10 @@
 # specific language governing permissions and limitations under the License.
 #
 
-import argparse
 import os
-import sys
 import struct
 import wave
 from datetime import datetime
-from threading import Thread
 
 from Keyword import Keyword
 
@@ -28,7 +25,7 @@ from pvrecorder import PvRecorder
 
 th = ThreadManager()
 
-class PorcupineDemo(Thread):
+class PorcupineDemo():
     """
     Microphone Demo for Porcupine wake word engine. It creates an input audio stream from a microphone, monitors it, and
     upon detecting the specified wake word(s) prints the detection time and wake word on console. It optionally saves
@@ -126,7 +123,6 @@ class PorcupineDemo(Thread):
                 result = porcupine.process(pcm)
                 if result >= 0:
                     print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
-                    self.terminate()
                     Keyword.findKeyword("listen")
                     print("Back to Porcupine.")
                     
