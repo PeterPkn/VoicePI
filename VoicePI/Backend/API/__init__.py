@@ -51,6 +51,7 @@ def listen_action(a_string):
         music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
         infos = music.getMetadata()
         speak(f'Started playing: {infos[0]} from {infos[1]}')
+        print("Starting Music...")
         music.start()
             
         return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
