@@ -68,7 +68,6 @@ def listen_in_bg():
 def listen():
     
     result_google = ""
-    result_sphinx = ""
     print("listening...")
     print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:
