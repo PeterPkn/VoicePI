@@ -54,7 +54,7 @@ class MusicPlayer:
 
 
     def play_video(self):
-        #print("play_video")
+        print("MUSIC??")
         #print(f"url: {self.url}")
         video = None
         while video is None and self._running:
