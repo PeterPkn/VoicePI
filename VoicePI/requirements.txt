@@ -18,3 +18,5 @@ requests
 python_weather
 pycamera
 opencv-python
+pvporcupine==2.1.0
+pvrecorder==1.0.2
