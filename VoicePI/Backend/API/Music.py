@@ -54,11 +54,12 @@ class MusicPlayer:
 
 
     def play_video(self):
-        print("MUSIC??")
+        
         #print(f"url: {self.url}")
         video = None
         while video is None and self._running:
             try:
+                print("MUSIC??")
                 video = pafy.new(self.url)
                 duration = video.duration
                 print(f"Metadata: \n{video}")
