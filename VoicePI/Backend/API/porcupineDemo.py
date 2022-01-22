@@ -123,6 +123,7 @@ class PorcupineDemo():
                 result = porcupine.process(pcm)
                 if result >= 0:
                     print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
+                    porcupine.delete()
                     Keyword.findKeyword("listen")
                     print("Back to Porcupine.")
                     
