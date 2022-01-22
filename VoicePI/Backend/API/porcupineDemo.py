@@ -125,11 +125,10 @@ class PorcupineDemo(Thread):
                 result = porcupine.process(pcm)
                 if result >= 0:
                     print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
-                    recorder.delete()
+                    self.terminate()
                     Keyword.findKeyword("listen")
                     print("Back to Porcupine.")
-                    recorder = PvRecorder(device_index=self._input_device_index, frame_length=porcupine.frame_length)
-                    recorder.start()
+                    
 
 
         except pvporcupine.PorcupineInvalidArgumentError as e:
