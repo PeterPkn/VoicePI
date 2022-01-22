@@ -61,7 +61,7 @@ class MusicPlayer:
             try:
                 print("MUSIC??")
                 video = pafy.new(self.url)
-                duration = video.duration
+                print("MUSIC??...")
                 print(f"Metadata: \n{video}")
                 #pass_infos=[video.title, video.author]
             except KeyError as error:
