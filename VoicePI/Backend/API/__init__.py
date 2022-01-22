@@ -13,8 +13,6 @@ from Keyword import Keyword
 
 from porcupineDemo import getPorcupineInst
 
-
-
 def play_action(a_string):
     music = MusicPlayer(a_string)
     music.start()
