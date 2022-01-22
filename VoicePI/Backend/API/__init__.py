@@ -88,7 +88,7 @@ Keyword('sussy',sussy_action,100 )
 #main(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
 porcupine = getPorcupineInst(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
 
-porcupine.start()
+#porcupine.start()
 
 def func():
     pass
