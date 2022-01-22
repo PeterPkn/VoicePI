@@ -72,7 +72,7 @@ def listen():
     print('Threshhold: ' + str(r.energy_threshold))
     with mic as source:
         r.adjust_for_ambient_noise(mic, duration=1)
-        audio1 = r.listen(source, timeout=5, phrase_time_limit=10)
+        audio1 = r.listen(source)
     print("listening finished")
         #   print(type(audio1))
     print("attempting google")
