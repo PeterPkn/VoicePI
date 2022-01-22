@@ -87,7 +87,7 @@ Keyword('among us',sussy_action,100 )
 Keyword('amogus',sussy_action,100 )
 Keyword('sussy',sussy_action,100 )
 
-main(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
+#main(access_key="IltlcJTJU4pl0n7+nrL4vF911ozV12VqPg2st1AciUebgjrpWCCP5A==", keyword_paths=["voicepiwake.ppn"])
 
 
 def func():
