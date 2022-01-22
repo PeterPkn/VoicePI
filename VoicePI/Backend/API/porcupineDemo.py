@@ -113,7 +113,7 @@ class PorcupineDemo(Thread):
                 result = porcupine.process(pcm)
                 if result >= 0:
                     print('[%s] Detected %s' % (str(datetime.now()), keywords[result]))
-                    recorder.stop()
+                    recorder.delete()
                     Keyword.findKeyword("listen")
                     recorder.start()
 
