@@ -41,7 +41,7 @@ class VideoPlayer:
             pafy.dump_cache()
             video = pafy.new(self.url)
             duration = video.duration
-            print(f"Metadata: \n{video}")    
+            print(f"Metadata: \n{video}")
             return [video.title, video.author]
         except KeyError as error:
             print("KeyError, Trying again")

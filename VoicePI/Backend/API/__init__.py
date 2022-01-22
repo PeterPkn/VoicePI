@@ -10,6 +10,7 @@ from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
+from CameraAccess import take_photo, take_video
 
 from porcupineDemo import getPorcupineInst
 
@@ -70,6 +71,12 @@ def sussy_action(a_string):
     speak('You sussy baka!')
     return jsonify({'answ':'You sussy baka.'})
 
+def photo_action():
+    take_photo()
+
+def video_action():
+    take_video()
+
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
 Keyword('listen bg',listenbg_action,2 )
@@ -78,6 +85,8 @@ Keyword('speak',speak_action,4 )
 Keyword('listen',listen_action,5 )
 Keyword('show',show_action,6 )
 Keyword('zeige',show_action,6 )
+Keyword('photo',photo_action,7 )
+Keyword('video',video_action,7 )
 
 
 Keyword('sus',sussy_action,100 )
@@ -108,6 +117,10 @@ def start_music(search, infos):
 @app.route('/wetter', methods=['GET'])
 def wetter():
     return {'wetter': 'wetter'}
+
+@app.route('/foto', methods=['GET'])
+def wetter():
+    return {'foto': 'taken'}
 
 @app.route('/specific', methods=['GET'])
 def specific():
