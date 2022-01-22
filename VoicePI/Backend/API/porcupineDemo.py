@@ -25,7 +25,7 @@ from ThreadManager import ThreadManager
 
 import pvporcupine
 from pvrecorder import PvRecorder
-sys.settrace()
+
 th = ThreadManager()
 
 class PorcupineDemo(Thread):
