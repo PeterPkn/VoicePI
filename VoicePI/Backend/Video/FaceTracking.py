@@ -30,6 +30,8 @@ class FaceTracking:
                 print(x)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
+            # TODO prüfen ob werte sich ändern --> wenn ja: gesicht erkannt
+            print(x)
             # Display the resulting frame
             cv2.imshow('Facetracking', frame)
 
