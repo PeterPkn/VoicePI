@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Help from './Pages/Help';
 import ImageDisp from './Pages/imagedisp';
 import SilentMode from './Pages/silentmode';
-
+import Capture from './Pages/Capture';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Route path="/help" element={<Help/>} />
             <Route path="/image" element={<ImageDisp/>} />
             <Route path="/silentmode" element={<SilentMode/>} />
-            <Route path="/capture" element={<SilentMode/>} />
+            <Route path="/capture" element={<Capture/>} />
           </Routes>
         </BrowserRouter>
 

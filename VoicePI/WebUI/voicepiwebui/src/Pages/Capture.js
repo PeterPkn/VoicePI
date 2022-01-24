@@ -54,9 +54,9 @@ export default function Capture(){
             </div>
             <Divider></Divider>
 
-            <div style={{display:"flex", justifyContent:"center", alignItems: "space-around"}}>
-            <Button onClick={take_video} >Video</Button>
-            <Button onClick={take_photo} >Photo</Button>
+            <div style={{display:"flex", height:'90vh', justifyContent:"space-around", alignItems: "center"}}>
+            <Button variant='outlined' style={{width:'30vw', height: '30vh'}} onClick={take_video} >Video</Button>
+            <Button variant='outlined' style={{width:'30vw', height: '30vh'}} onClick={take_photo} >Photo</Button>
             </div>
         </div>
 
