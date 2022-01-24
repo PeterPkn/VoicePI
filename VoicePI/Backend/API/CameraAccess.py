@@ -1,3 +1,4 @@
+from itertools import count
 import cv2
 import time
 
@@ -8,12 +9,13 @@ def take_photo():
     # Check if the webcam is opened correctly
     if not cap.isOpened():
         raise IOError("Cannot open webcam")
-
+    count = 0
     while True:
+        count += 1
         ret, frame = cap.read()
         frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
         cv2.imshow('Input', frame)
-        if cv2.waitKey(1) & 0xFF == ord('p'):
+        if count > 10000:
             # cv2.imwrite('images/c1.png', frame)
             cv2.imwrite(f'images/pic_{time.time()}.png', frame)
             cv2.destroyAllWindows()
