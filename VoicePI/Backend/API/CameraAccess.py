@@ -37,7 +37,7 @@ def take_video():
     frame_height = int(vid.get(4))
 
     size = (frame_width, frame_height)
-    result = cv2.VideoWriter(f'videos/filename_{time.time()}.avi',
+    result = cv2.VideoWriter(f'videos/video{time.time()}.avi',
                              cv2.VideoWriter_fourcc(*'MJPG'),
                              30, size)
     max_frames = 200
