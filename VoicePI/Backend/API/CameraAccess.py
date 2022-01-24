@@ -38,7 +38,7 @@ def take_video():
     result = cv2.VideoWriter(f'videos/filename_{time.time()}.avi',
                              cv2.VideoWriter_fourcc(*'MJPG'),
                              30, size)
-    max_frames = 500
+    max_frames = 200
     frames = 0
     while True:
         frames += 1
@@ -58,5 +58,5 @@ def take_video():
     cv2.destroyAllWindows()
 
 
-take_video()
+# take_video()
 # take_photo()
