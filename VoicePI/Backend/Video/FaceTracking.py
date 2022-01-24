@@ -27,10 +27,11 @@ class FaceTracking:
 
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces:
+                print(x)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
             # Display the resulting frame
-            cv2.imshow('Video', frame)
+            cv2.imshow('Facetracking', frame)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -38,3 +39,6 @@ class FaceTracking:
         # When everything is done, release the capture
         video_capture.release()
         cv2.destroyAllWindows()
+
+
+FaceTracking.tracking()

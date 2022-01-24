@@ -4,6 +4,8 @@ from flask_cors import CORS, cross_origin
 import json
 from time import sleep
 
+import asyncio
+from Weather import getweather
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
@@ -105,7 +107,8 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    return app.response_class({'wetter': 'wetter'}, content_type='application/json')
+    return app.response_class({'wetter': 'wetter taken'}, content_type='application/json')
+    
 
 @app.route('/foto', methods=['GET'])
 def foto():
