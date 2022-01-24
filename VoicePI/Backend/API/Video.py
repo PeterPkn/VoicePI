@@ -84,7 +84,7 @@ class VideoPlayer:
         Media.get_mrl()
 
         player.set_media(Media)
-        player.toggle_fullscreen()
+        #player.toggle_fullscreen()
         player.play()
 
         time.sleep(10)
