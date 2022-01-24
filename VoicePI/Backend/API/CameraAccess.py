@@ -1,3 +1,4 @@
+from itertools import count
 import cv2
 import time
 
@@ -8,12 +9,13 @@ def take_photo():
     # Check if the webcam is opened correctly
     if not cap.isOpened():
         raise IOError("Cannot open webcam")
-
+    count = 0
     while True:
+        count += 1
         ret, frame = cap.read()
         frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
         cv2.imshow('Input', frame)
-        if cv2.waitKey(1) & 0xFF == ord('p'):
+        if count > 60:
             # cv2.imwrite('images/c1.png', frame)
             cv2.imwrite(f'images/pic_{time.time()}.png', frame)
             cv2.destroyAllWindows()
@@ -35,14 +37,16 @@ def take_video():
     frame_height = int(vid.get(4))
 
     size = (frame_width, frame_height)
-    result = cv2.VideoWriter(f'videos/filename_{time.time()}.avi',
+    result = cv2.VideoWriter(f'videos/video{time.time()}.avi',
                              cv2.VideoWriter_fourcc(*'MJPG'),
                              30, size)
-    max_frames = 500
+    max_frames = 200
     frames = 0
     while True:
         frames += 1
         ret, frame = vid.read()
+        frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
+        cv2.imshow('Input', frame)
         if ret:
             result.write(frame)
             cv2.imshow('Frame', frame)
@@ -58,5 +62,5 @@ def take_video():
     cv2.destroyAllWindows()
 
 
-take_video()
+# take_video()
 # take_photo()
