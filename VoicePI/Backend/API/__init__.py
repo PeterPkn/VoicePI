@@ -107,7 +107,8 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    pass
+    return app.response_class({'wetter': 'wetter taken'}, content_type='application/json')
+    
 
 @app.route('/foto', methods=['GET'])
 def foto():
