@@ -15,7 +15,7 @@ def take_photo():
         ret, frame = cap.read()
         frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
         cv2.imshow('Input', frame)
-        if count > 10000:
+        if count > 60:
             # cv2.imwrite('images/c1.png', frame)
             cv2.imwrite(f'images/pic_{time.time()}.png', frame)
             cv2.destroyAllWindows()
