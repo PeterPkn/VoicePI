@@ -10,7 +10,7 @@ from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
-from CameraAccess import take_photo, take_video
+#from CameraAccess import take_photo, take_video
 
 from porcupineDemo import getPorcupineInst
 
@@ -72,10 +72,12 @@ def sussy_action(a_string):
     return jsonify({'answ':'You sussy baka.'})
 
 def photo_action():
-    take_photo()
+    #take_photo()
+    pass
 
 def video_action():
-    take_video()
+    #take_video()
+    pass
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
