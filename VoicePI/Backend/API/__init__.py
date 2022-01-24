@@ -121,8 +121,8 @@ def wetter():
     return {'wetter': 'wetter'}
 
 @app.route('/foto', methods=['GET'])
-def wetter():
-    return {'foto': 'taken'}
+def foto():
+    return {'foto': 'Picture taken'}
 
 @app.route('/specific', methods=['GET'])
 def specific():
