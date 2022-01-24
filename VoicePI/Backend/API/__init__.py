@@ -118,11 +118,11 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    return {'wetter': 'wetter'}
+    return app.response_class({'wetter': 'wetter'}, content_type='application/json')
 
 @app.route('/foto', methods=['GET'])
 def foto():
-    return {'foto': 'Picture taken'}
+    return app.response_class({'foto': 'Picture taken'}, content_type='application/json')
 
 @app.route('/specific', methods=['GET'])
 def specific():
@@ -131,7 +131,7 @@ def specific():
     else:
         return "Error: No id field provided. Please specify an id."
     
-    return {'id_is':id}
+    return app.response_class({'id_is':id}, content_type='application/json')
 
 
 
@@ -142,7 +142,7 @@ def update_record():
 
     a_string = record['msg'].lower()
 
-    return Keyword.findKeyword(a_string)
+    return app.response_class(Keyword.findKeyword(a_string), content_type='application/json')
 
 
 if __name__ == '__main__':
