@@ -4,13 +4,15 @@ from flask_cors import CORS, cross_origin
 import json
 from time import sleep
 
+import asyncio
+from Weather import getweather
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
-#from CameraAccess import take_photo, take_video
+from CameraAccess import take_photo, take_video
 
 from porcupineDemo import getPorcupineInst
 
@@ -46,20 +48,9 @@ def listen_action(a_string):
     req = listen()
     print(req['query'])
         
-    if 'play' in req or 'spiele' in req['query']:
-        music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
-        infos = music.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
-        print("Starting Music...")
-        music.start()
-            
-        return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+    return Keyword.findKeyword(req['query'])
 
-    elif 'show' in req or 'zeige' in req['query']:
-        video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
-        infos = video.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
-        video.start()
+    
 
 def show_action(a_string):
     video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))
@@ -71,13 +62,11 @@ def sussy_action(a_string):
     speak('You sussy baka!')
     return jsonify({'answ':'You sussy baka.'})
 
-def photo_action():
-    #take_photo()
-    pass
+def photo_action(a_string):
+    take_photo()
 
-def video_action():
-    #take_video()
-    pass
+def video_action(a_string):
+    take_video()
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
@@ -118,11 +107,12 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    return {'wetter': 'wetter'}
+    return app.response_class({'wetter': 'wetter taken'}, content_type='application/json')
+    
 
 @app.route('/foto', methods=['GET'])
 def foto():
-    return {'foto': 'Picture taken'}
+    return app.response_class({'foto': 'Picture taken'}, content_type='application/json')
 
 @app.route('/specific', methods=['GET'])
 def specific():
@@ -131,7 +121,7 @@ def specific():
     else:
         return "Error: No id field provided. Please specify an id."
     
-    return {'id_is':id}
+    return app.response_class({'id_is':id}, content_type='application/json')
 
 
 
@@ -142,7 +132,7 @@ def update_record():
 
     a_string = record['msg'].lower()
 
-    return Keyword.findKeyword(a_string)
+    return app.response_class(Keyword.findKeyword(a_string), content_type='application/json')
 
 
 if __name__ == '__main__':

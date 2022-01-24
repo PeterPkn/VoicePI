@@ -19,7 +19,7 @@ export default function SilentMode(){
             setmessages(['VoicePI: ' + '...', 'YOU: ' + inputRef.current.value, ...messages]);
             
 
-            fetch(`http://192.168.1.13:5000/silentmode`, {
+            fetch(`http://192.168.207.86:5000/silentmode`, {
                 method: "POST",
                 body: JSON.stringify({
                     msg: inputRef.current.value,
