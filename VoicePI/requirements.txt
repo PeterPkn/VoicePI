@@ -17,6 +17,8 @@ youtube_dl
 requests
 python_weather
 pycamera
-opencv-python
+flask
+flask_cors
+
 pvporcupine==2.1.0
 pvrecorder==1.0.2
