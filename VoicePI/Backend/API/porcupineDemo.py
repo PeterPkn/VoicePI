@@ -133,11 +133,11 @@ class PorcupineDemo():
 
         except pvporcupine.PorcupineInvalidArgumentError as e:
             print("One or more arguments provided to Porcupine is invalid: {\n" +
-                  f"\t{self._access_key=}\n" +
-                  f"\t{self._library_path=}\n" +
-                  f"\t{self._model_path=}\n" +
-                  f"\t{self._keyword_paths=}\n" +
-                  f"\t{self._sensitivities=}\n" +
+                  f"\t{self._access_key}\n" +
+                  f"\t{self._library_path}\n" +
+                  f"\t{self._model_path}\n" +
+                  f"\t{self._keyword_paths}\n" +
+                  f"\t{self._sensitivities}\n" +
                   "}")
             print(f"If all other arguments seem valid, ensure that '{self._access_key}' is a valid AccessKey")
             raise e
