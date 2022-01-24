@@ -60,13 +60,11 @@ def sussy_action(a_string):
     speak('You sussy baka!')
     return jsonify({'answ':'You sussy baka.'})
 
-def photo_action():
+def photo_action(a_string):
     take_photo()
-    pass
 
-def video_action():
+def video_action(a_string):
     take_video()
-    pass
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
