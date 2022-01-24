@@ -1,30 +1,30 @@
-import python_weather
-import asyncio
+import requests
+from bs4 import BeautifulSoup
 
-# import the module
-
-
-async def getweather(city: str):
-    # declare the client. format defaults to metric system (celcius, km/h, etc.)
-    client = python_weather.Client(format=python_weather.METRIC)
-
-    # fetch a weather forecast from a city
-    weather = await client.find(city)
-
-    # returns the current day's forecast temperature (int)
-    forecast_message = ""
-    for forecast in weather.forecasts:
-        forecast_message += f"{str(forecast.date)}, {forecast.sky_text}, {forecast.temperature} \n"
-
-    # close the wrapper once done
-    await client.close()
-    return {"temperature": weather.current.temperature, "weather": weather.current.sky_text, "forecast": forecast_message}
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
 
-if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    a = loop.run_until_complete(asyncio.gather(getweather("vienna")))[0]
-    print(a["temperature"])
-    print(a["weather"])
-    print(a["forecast"])
-    # loop.close()
+def weather(city):
+    city = city + "weather"
+    city = city.replace(" ", "+")
+    res = requests.get(
+        f'https://www.google.com/search?q={city}&oq={city}&aqs=chrome.0.35i39l2j0l4j46j69i60.6128j1j7&sourceid=chrome&ie=UTF-8',
+        headers=headers)
+    print("Searching...\n")
+    soup = BeautifulSoup(res.text, 'html.parser')
+    location = soup.select('#wob_loc')[0].getText().strip()
+    time = soup.select('#wob_dts')[0].getText().strip()
+    info = soup.select('#wob_dc')[0].getText().strip()
+    weather = soup.select('#wob_tm')[0].getText().strip()
+
+    return {"location": location, "time": time, "weather": info, "temperature": weather}
+
+
+test = weather("vienna")
+print(test["location"])
+print(test["time"])
+print(test["weather"])
+print(test["temperature"])
+
+# This code is contributed by adityatri

@@ -22,7 +22,6 @@ def find_url(name):
 
 class VideoPlayer:
 
-
         
     def __init__(self, name):
         self.url = find_url(name)
@@ -38,7 +37,6 @@ class VideoPlayer:
 
     def getMetadata(self):
         try:
-            pafy.dump_cache()
             video = pafy.new(self.url)
             duration = video.duration
             print(f"Metadata: \n{video}")
