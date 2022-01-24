@@ -46,20 +46,9 @@ def listen_action(a_string):
     req = listen()
     print(req['query'])
         
-    if 'play' in req or 'spiele' in req['query']:
-        music = MusicPlayer(req['query'].replace('play','').replace('spiele', ''))
-        infos = music.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
-        print("Starting Music...")
-        music.start()
-            
-        return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
+    return Keyword.findKeyword(req['query'])
 
-    elif 'show' in req or 'zeige' in req['query']:
-        video = VideoPlayer(req['query'].replace('play','').replace('spiele', ''))
-        infos = video.getMetadata()
-        speak(f'Started playing: {infos[0]} from {infos[1]}')
-        video.start()
+    
 
 def show_action(a_string):
     video = VideoPlayer(a_string.replace('play','').replace('spiele', ''))

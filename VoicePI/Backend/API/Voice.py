@@ -78,7 +78,7 @@ def listen():
     print("attempting google")
     try:
         text = r.recognize_google(audio1, language="de-DE")
-        result_google = f"Online (Google): {text}"
+        result_google = f"{text}"
     except sr.UnknownValueError:
         result_google = "Google Speech didn't recognize anything (UnknownValueError)"
     print(result_google)
