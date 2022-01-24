@@ -31,7 +31,7 @@ const MainMenu = () => {
 
     if(loading===true){
     fetch(`http://192.168.207.86:5000/wetter`)
-            .then((response) => response.json())
+            .then((response) => response.text())
             .then((data) =>setFetchData(data))
             .then((data)=>console.log(fetchdata))
             .then((data)=>setloading(false))

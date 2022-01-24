@@ -10,7 +10,7 @@ from Music import MusicPlayer
 from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
-from CameraAccess import take_photo, take_video
+#from CameraAccess import take_photo, take_video
 
 from porcupineDemo import getPorcupineInst
 
@@ -61,10 +61,12 @@ def sussy_action(a_string):
     return jsonify({'answ':'You sussy baka.'})
 
 def photo_action():
-    take_photo()
+    #take_photo()
+    pass
 
 def video_action():
-    take_video()
+    #take_video()
+    pass
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
@@ -105,11 +107,11 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    return {'wetter': 'wetter'}
+    return app.response_class({'wetter': 'wetter'}, content_type='application/json')
 
 @app.route('/foto', methods=['GET'])
-def wetter():
-    return {'foto': 'taken'}
+def foto():
+    return app.response_class({'foto': 'Picture taken'}, content_type='application/json')
 
 @app.route('/specific', methods=['GET'])
 def specific():
@@ -118,7 +120,7 @@ def specific():
     else:
         return "Error: No id field provided. Please specify an id."
     
-    return {'id_is':id}
+    return app.response_class({'id_is':id}, content_type='application/json')
 
 
 
@@ -129,7 +131,7 @@ def update_record():
 
     a_string = record['msg'].lower()
 
-    return Keyword.findKeyword(a_string)
+    return app.response_class(Keyword.findKeyword(a_string), content_type='application/json')
 
 
 if __name__ == '__main__':
