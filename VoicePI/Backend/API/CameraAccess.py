@@ -45,6 +45,7 @@ def take_video():
     while True:
         frames += 1
         ret, frame = vid.read()
+        cv2.imshow('Input', frame)
         if ret:
             result.write(frame)
             cv2.imshow('Frame', frame)
