@@ -49,22 +49,14 @@ export default function Capture(){
                 <Button onClick={()=>{navigate('/')}} style={{minWidth:'100px', minHeight:'50px'}}>Zurück</Button>
                 <KeyboardIcon style={iconStyle}/>
                 <Typography variant='h4'>
-                    Silent Mode
+                    Photo / Video Mode
                 </Typography>
             </div>
             <Divider></Divider>
 
-            <div style={{maxHeight:'75vh', overflow:'auto', display:'flex', flexDirection:'column-reverse'}}>
-            {messages.map(message=>{
-                if(message.startsWith('YOU:')){
-                    return <MessageBubble message={message} alignLeft={false} />;
-                }
-                return <MessageBubble message={message} alignLeft={true} />;
-            })}  
-            </div>
-
-            <div style={{width:'95%', display:'flex', flexDirection:'row', margin:'20px', position:'absolute', bottom: 0}}>
-                <TextField onKeyUp={(code)=>{if(code.code === 'Enter'){sendMessage();}}} inputRef={inputRef} label='Type your message here.' variant='outlined' style={{flexGrow:'1'}} ></TextField> <IconButton onClick={sendMessage}><SendIcon/></IconButton>
+            <div style={{display:"flex", justifyContent:"center", alignItems: "space-around"}}>
+            <Button onClick={take_video} >Video</Button>
+            <Button onClick={take_photo} >Photo</Button>
             </div>
         </div>
 
