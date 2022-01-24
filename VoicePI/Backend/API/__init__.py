@@ -107,14 +107,7 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-
-    loop = asyncio.get_event_loop()
-    a = loop.run_until_complete(asyncio.gather(getweather("vienna")))[0]
-    print(a["temperature"])
-    print(a["weather"])
-    print(a["forecast"])
-
-    return app.response_class({'wetter': f'{a["temperature"]};{a["weather"]};{a["forecast"]}'}, content_type='application/json')
+    pass
 
 @app.route('/foto', methods=['GET'])
 def foto():

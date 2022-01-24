@@ -26,6 +26,7 @@ function App() {
             <Route path="/help" element={<Help/>} />
             <Route path="/image" element={<ImageDisp/>} />
             <Route path="/silentmode" element={<SilentMode/>} />
+            <Route path="/capture" element={<SilentMode/>} />
           </Routes>
         </BrowserRouter>
 

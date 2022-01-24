@@ -67,7 +67,7 @@ const MainMenu = () => {
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Audio</Typography></Button>
+                    <Button onClick={()=>navigate("/capture")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Audio</Typography></Button>
                 </Paper>
             </div>
             
