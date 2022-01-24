@@ -4,8 +4,6 @@ from flask_cors import CORS, cross_origin
 import json
 from time import sleep
 
-import asyncio
-from Weather import getweather
 from ThreadManager import ThreadManager
 
 from Music import MusicPlayer
