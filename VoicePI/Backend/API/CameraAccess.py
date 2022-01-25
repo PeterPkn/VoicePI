@@ -51,7 +51,9 @@ def take_video():
         if ret:
             result.write(frame)
             frame = cv2.resize(frame, None, fx=1, fy=1, interpolation=cv2.INTER_AREA)
-            cv2.imshow('Frame', frame)
+            cv2.namedWindow("Input", cv2.WND_PROP_FULLSCREEN)
+            cv2.setWindowProperty("Input",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+            cv2.imshow('Input', frame)
             if cv2.waitKey(1) & frames == max_frames:
                 print()
                 break
@@ -65,5 +67,5 @@ def take_video():
     cv2.destroyAllWindows()
 
 
-#take_video()
+take_video()
 #take_photo()
