@@ -62,7 +62,7 @@ def video_action(a_string):
 def wetter_action():
     wth = weather("vienna")
     speak(f"Das wetter is {wth['weather']}, und es hat {wth['weather']}  Grad")
-    return jsonify({'wetter': f'{wth["location"]};{wth["time"]};{wth["weather"]};{wth["temperature"]}'})
+    return jsonify({'answ': f"Das wetter is {wth['weather']}, und es hat {wth['weather']}  Grad"})
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
