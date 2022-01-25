@@ -60,7 +60,7 @@ def video_action(a_string):
 
 
 def wetter_action(a_string):
-    print(a_string)
+    print(f"ASTRING: {a_string}")
     city = "vienna"
     if(a_string):
         city = a_string
