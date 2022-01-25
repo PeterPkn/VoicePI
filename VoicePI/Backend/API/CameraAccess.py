@@ -22,7 +22,7 @@ def take_photo():
             # cv2.imwrite('images/c1.png', frame)
 
             img = cv2.imwrite("image.jpg", frame)
-            path = '/home/pi/VoicePIVoicePI/Backend/API/'
+            path = '/home/pi/VoicePIVoicePI/WebUI/voicepiwebui/src/images'
             cv2.imwrite(os.path.join(path , f'images/pic_{time.time()}.png'), img)
             cv2.destroyAllWindows()
             break
