@@ -22,16 +22,6 @@ def play_action(a_string):
     speak(f'Started playing: {infos[0]} from {infos[1]}')
     return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
-def listenbg_action(a_string):
-    if 'listen bg stop' in a_string:
-        try:
-            stop_listening()
-            return jsonify({'answ':f'Stopped Listening in the Background'})
-        except error:
-            print('Could not stop Background Listening!')
-            
-    stop_listening = listen_in_bg()
-    return jsonify({'answ':f'Listening in the Background'})
 
 def stop_action(a_string):
     ThreadManager.StopAllMusic()
@@ -68,9 +58,14 @@ def photo_action(a_string):
 def video_action(a_string):
     take_video()
 
+
+def wetter_action():
+    wth = weather("vienna")
+    speak(f"Das wetter is {wth['weather']}, und es hat {wth['weather']}  Grad")
+    return jsonify({'wetter': f'{wth["location"]};{wth["time"]};{wth["weather"]};{wth["temperature"]}'})
+
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
-Keyword('listen bg',listenbg_action,2 )
 Keyword('stop',stop_action,3 )
 Keyword('speak',speak_action,4 )
 Keyword('listen',listen_action,5 )
@@ -78,6 +73,8 @@ Keyword('show',show_action,6 )
 Keyword('zeige',show_action,6 )
 Keyword('photo',photo_action,7 )
 Keyword('video',video_action,7 )
+Keyword('wetter',wetter_action,8 )
+Keyword('weather',wetter_action,8 )
 
 
 Keyword('sus',sussy_action,100 )

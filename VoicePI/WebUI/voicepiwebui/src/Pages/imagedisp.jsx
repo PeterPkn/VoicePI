@@ -32,6 +32,11 @@ const images = [
     'https://via.placeholder.com/400x400?text=Hello!',  },
 ];
 
+//var fs = require('images');
+//var files = fs.readdirSync('/');
+
+//console.log(files)
+
 function SwipeableTextMobileStepper() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);

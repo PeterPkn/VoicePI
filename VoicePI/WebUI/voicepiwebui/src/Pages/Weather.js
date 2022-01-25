@@ -17,7 +17,7 @@ export default function Weather(){
     function weather(){
         fetch('http://192.168.207.86:5000/wetter')
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => setlocweather(data));
     }
 
     return(
@@ -29,6 +29,7 @@ export default function Weather(){
                 <Typography variant='h4'>
                     Wetter
                 </Typography>
+                <Typography>{locweather["temperature"]}</Typography>
             </div>
 
 
