@@ -40,6 +40,12 @@ const MainMenu = () => {
                 });
     }
 
+    function open_img(){
+
+        require('child_process').exec('start "" "c:\\test"');
+
+    }
+
 
     return(
         <>
