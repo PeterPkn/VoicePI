@@ -62,7 +62,7 @@ def video_action(a_string):
 def wetter_action(a_string):
     print(a_string)
     city = "vienna"
-    if(a_string is not ""):
+    if(a_string):
         city = a_string
     wth = weather(city)
     speak(f"Das wetter in {city} ist {wth['weather']}, und es hat {wth['temperature']}  Grad")
