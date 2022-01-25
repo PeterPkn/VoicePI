@@ -29,6 +29,16 @@ const MainMenu = () => {
 
     const [fetchdata, setFetchData] = useState(null);
 
+    function listen_call(){
+        fetch(`http://192.168.207.86:5000/silentmode`, {
+                method: "POST",
+                body: JSON.stringify({
+                    msg: 'listen',
+                }),
+            }).catch((error) => {
+                    console.error(error);
+                });
+    }
 
 
     return(
@@ -42,7 +52,7 @@ const MainMenu = () => {
           
             <div class="one">
                 <Paper style={divst}>
-                    <Button onClick={()=>{navigate("/webbrowser");}} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>Webbrowser</Typography> </Button>
+                    <Button onClick={listen_call} startIcon={<LanguageIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} > <Typography variant='h5'>Listen</Typography> </Button>
                 </Paper>
             </div>
             
@@ -60,13 +70,13 @@ const MainMenu = () => {
             
             <div class="four">
                 <Paper style={divst}>
-                    <Button onClick={()=>navigate("/capture")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Audio</Typography></Button>
+                    <Button onClick={()=>navigate("/capture")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Video/Foto</Typography></Button>
                 </Paper>
             </div>
             
             <div class="five">
                 <Paper style={divst}>
-                    <Button onClick={()=>{}} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Wetter</Typography></Button>
+                    <Button onClick={()=>navigate("/wetter")} startIcon={<AccessibilityIcon sx={iconStyle}/>} style={{height:"100%", width:"100%"}} ><Typography variant='h5'>Wetter</Typography></Button>
                 </Paper>
             </div>
             

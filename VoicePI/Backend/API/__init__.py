@@ -11,6 +11,7 @@ from Video import VideoPlayer
 from Voice import listen, speak, listen_in_bg
 from Keyword import Keyword
 from CameraAccess import take_photo, take_video
+from Weather import weather
 
 from porcupineDemo import getPorcupineInst
 
@@ -106,7 +107,8 @@ def start_music(search, infos):
 
 @app.route('/wetter', methods=['GET'])
 def wetter():
-    return jsonify({'wetter': 'wetter taken'})
+    wth = weather("vienna")
+    return jsonify({'wetter': f'{wth["location"]};{wth["time"]};{wth["weather"]};{wth["temperature"]}'})
     
 
 @app.route('/foto', methods=['GET'])

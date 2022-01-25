@@ -6,6 +6,7 @@ import Help from './Pages/Help';
 import ImageDisp from './Pages/imagedisp';
 import SilentMode from './Pages/silentmode';
 import Capture from './Pages/Capture';
+import Weather from './Pages/Weather';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/image" element={<ImageDisp/>} />
             <Route path="/silentmode" element={<SilentMode/>} />
             <Route path="/capture" element={<Capture/>} />
+            <Route path="/wetter" element={<Weather/>} />
           </Routes>
         </BrowserRouter>
 
