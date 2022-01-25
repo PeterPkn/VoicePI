@@ -24,6 +24,7 @@ def take_photo():
             img = cv2.imwrite("image.jpg", frame)
             path = '/home/pi/VoicePIVoicePI/WebUI/voicepiwebui/src/images'
             cv2.imwrite(os.path.join(path , f'images/pic_{time.time()}.png'), img)
+            print("IMAGE SAVED IN SRC IMG")
             cv2.destroyAllWindows()
             break
 
