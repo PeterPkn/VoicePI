@@ -32,7 +32,7 @@ const images = [
     'https://via.placeholder.com/400x400?text=Hello!',  },
 ];
 
-var fs = require('./images');
+var fs = require('images');
 var files = fs.readdirSync('/');
 
 console.log(files)
