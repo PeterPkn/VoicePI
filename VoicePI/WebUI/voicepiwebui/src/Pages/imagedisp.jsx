@@ -32,8 +32,8 @@ const images = [
     'https://via.placeholder.com/400x400?text=Hello!',  },
 ];
 
-var fs = require('../../../../Backend/API/');
-var files = fs.readdirSync('/images/');
+var fs = require('../images');
+var files = fs.readdirSync('/');
 
 console.log(files)
 
