@@ -4,6 +4,7 @@ pyaudio
 
 #   Wenn Windows: pip install pipwin    --> pipwin install pyaudio          pipwin install pocketsphinx
 #   wenn es nicht funktioniert: pipwin refresh
+#   line 53 und line 54 im backend_youtube_dl.py package auskommentieren
 
 
 pocketsphinx
