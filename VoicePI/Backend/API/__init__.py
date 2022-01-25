@@ -43,6 +43,7 @@ def speak_action(a_string):
     return {'answ':a_string[5:]}
 
 def listen_action(a_string):
+    speak('Hmmm?')
     req = listen()
     print(req['query'])
         
