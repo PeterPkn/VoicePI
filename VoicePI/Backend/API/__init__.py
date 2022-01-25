@@ -22,16 +22,6 @@ def play_action(a_string):
     speak(f'Started playing: {infos[0]} from {infos[1]}')
     return jsonify({'answ':f'Started playing: {infos[0]} from {infos[1]}'})
 
-def listenbg_action(a_string):
-    if 'listen bg stop' in a_string:
-        try:
-            stop_listening()
-            return jsonify({'answ':f'Stopped Listening in the Background'})
-        except error:
-            print('Could not stop Background Listening!')
-            
-    stop_listening = listen_in_bg()
-    return jsonify({'answ':f'Listening in the Background'})
 
 def stop_action(a_string):
     ThreadManager.StopAllMusic()
@@ -70,7 +60,6 @@ def video_action(a_string):
 
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
-Keyword('listen bg',listenbg_action,2 )
 Keyword('stop',stop_action,3 )
 Keyword('speak',speak_action,4 )
 Keyword('listen',listen_action,5 )

@@ -14,7 +14,9 @@ def take_photo():
         count += 1
         ret, frame = cap.read()
         frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
-        cv2.imshow('Input', frame)
+        cv2.namedWindow("Input", cv2.WND_PROP_FULLSCREEN)
+        cv2.setWindowProperty("Input",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+        cv2.imshow("Input", frame)
         if count > 60:
             # cv2.imwrite('images/c1.png', frame)
             cv2.imwrite(f'images/pic_{time.time()}.png', frame)
