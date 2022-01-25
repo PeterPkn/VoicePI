@@ -60,7 +60,11 @@ def video_action(a_string):
 
 
 def wetter_action(a_string):
-    wth = weather("vienna")
+    print(a_string)
+    city = "vienna"
+    if(a_string is not ""):
+        city = a_string
+    wth = weather(city)
     print(f"Das wetter is {wth['weather']}, und es hat {wth['temperature']}  Grad")
     speak(f"Das wetter is {wth['weather']}, und es hat {wth['temperature']}  Grad")
     return jsonify({'answ': f"Das wetter is {wth['weather']}, und es hat {wth['weather']}  Grad"})
