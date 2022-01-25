@@ -21,18 +21,18 @@ function Help() {
             </div>
             <Divider></Divider>
             <Paper elevation={7} style={{margin:'30px'}}>
-                <Typography style={{margin:'10px'}} variant='h5'>Wie mache ich das?</Typography>
-                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} So macht man das!</Typography>
+                <Typography style={{margin:'10px'}} variant='h5'>Was macht Silent Mode?</Typography>
+                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} Der Silent Mode lässt dich per Text mit dem VoicePI kommunizieren.</Typography>
             </Paper>
 
             <Paper elevation={7} style={{margin:'30px'}}>
-                <Typography style={{margin:'10px'}} variant='h5'>Wie mache ich das nummer 2?</Typography>
-                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} So macht man das nummer 2!</Typography>
+                <Typography style={{margin:'10px'}} variant='h5'>Wie Spreche ich mit dem VoicePI?</Typography>
+                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} Die Talk Taste auf dem MainMenu drücken und den Befehl sagen.</Typography>
             </Paper>
 
             <Paper elevation={7} style={{margin:'30px'}}>
-                <Typography style={{margin:'10px'}} variant='h5'>Sind das gute Fragen?</Typography>
-                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} Ja, sicher!</Typography>
+                <Typography style={{margin:'10px'}} variant='h5'>Wie mache ich ein Foto?</Typography>
+                <Typography  style={{margin:'10px'}}variant='h6'>{'\t'} Im Hauptmenü die FOto Option wählen.</Typography>
             </Paper>
         </div>
     );
