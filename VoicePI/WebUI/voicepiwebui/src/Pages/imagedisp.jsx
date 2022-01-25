@@ -16,7 +16,7 @@ const images = [
   {
     label: 'Image 1',
     imgPath:
-      'https://photos.app.goo.gl/g5vNnfydYdSwBfs3A',
+      'https://via.placeholder.com/1600x900?text=Hello!',
   },
   {
     label: 'Image 2',
