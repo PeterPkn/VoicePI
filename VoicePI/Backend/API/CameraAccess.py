@@ -1,6 +1,7 @@
 from itertools import count
 import cv2
 import time
+import os
 
 
 def take_photo():
@@ -19,7 +20,10 @@ def take_photo():
         cv2.imshow("Input", frame)
         if count > 60:
             # cv2.imwrite('images/c1.png', frame)
-            cv2.imwrite(f'images/pic_{time.time()}.png', frame)
+
+            img = cv2.imwrite("image.jpg", frame)
+            path = '/home/pi/VoicePIVoicePI/Backend/API/'
+            cv2.imwrite(os.path.join(path , f'images/pic_{time.time()}.png'), img)
             cv2.destroyAllWindows()
             break
 
