@@ -29,6 +29,7 @@ export default function Weather(){
                 <Typography variant='h4'>
                     Wetter
                 </Typography>
+                <Typography>{weather}</Typography>
             </div>
 
 
