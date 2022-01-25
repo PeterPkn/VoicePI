@@ -58,6 +58,12 @@ def photo_action(a_string):
 def video_action(a_string):
     take_video()
 
+
+def wetter_action():
+    wth = weather("vienna")
+    speak(f"Das wetter is {wth['weather']}, und es hat {wth['weather']}  Grad")
+    return jsonify({'wetter': f'{wth["location"]};{wth["time"]};{wth["weather"]};{wth["temperature"]}'})
+
 Keyword('play',play_action,1 )
 Keyword('spiele',play_action,1 )
 Keyword('stop',stop_action,3 )
@@ -67,6 +73,8 @@ Keyword('show',show_action,6 )
 Keyword('zeige',show_action,6 )
 Keyword('photo',photo_action,7 )
 Keyword('video',video_action,7 )
+Keyword('wetter',wetter_action,8 )
+Keyword('weather',wetter_action,8 )
 
 
 Keyword('sus',sussy_action,100 )
