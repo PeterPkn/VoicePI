@@ -27,6 +27,7 @@ export default function SilentMode(){
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    console.log(data)
                     setmessages(['VoicePI: ' + data.answ, 'YOU: ' + inputRef.current.value, ...messages]);
                 })
                 .then(()=>inputRef.current.value = '')
