@@ -63,7 +63,7 @@ def wetter_action(a_string):
     print(f"ASTRING: {a_string}")
     city = "vienna"
     if(a_string.replace("wetter", "").replace("weather", "").strip() is not ""):
-        city = a_string
+        city = a_string.replace("wetter", "").replace("weather", "").strip()
     wth = weather(city)
     speak(f"Das Wetter in {city} ist {wth['weather']}, und es hat {wth['temperature']}  Grad")
     return jsonify({'answ': f"Das Wetter in {city} ist {wth['weather']}, und es hat {wth['temperature']}  Grad"})
