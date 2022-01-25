@@ -1,5 +1,7 @@
 from logging import error
 from threading import Thread
+from urllib.error import URLError
+
 import pafy, vlc, time
 import re, requests, subprocess, urllib.parse, urllib.request
 from bs4 import BeautifulSoup
@@ -8,30 +10,30 @@ from ThreadManager import ThreadManager
 
 th = ThreadManager()
 
-#TODO: Rewrite to Class
+
+# TODO: Rewrite to Class
 
 def find_url(name):
-        query_string = urllib.parse.urlencode({"search_query": name})
-        format_url = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
+    query_string = urllib.parse.urlencode({"search_query": name})
+    format_url = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
 
-        search_results = re.findall(r"watch\?v=(\S{11})", format_url.read().decode())
-        clip = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
+    search_results = re.findall(r"watch\?v=(\S{11})", format_url.read().decode())
+    clip = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
 
-        print(clip)
-        return clip
+    print(clip)
+    return clip
+
 
 class VideoPlayer:
 
-        
     def __init__(self, name):
         self.url = find_url(name)
         self._running = True
-        
-    
+
     def terminate(self):
         print("User requested STOP")
         self._running = False
-    
+
     def start(self):
         th.AddVideoThread(self.play_video, (), self.terminate)
 
@@ -49,17 +51,16 @@ class VideoPlayer:
             print("URL Error, Probaby no Internet Connection")
             print(error.with_traceback)
 
-
     def play_video(self):
-        #print("play_video")
-        #print(f"url: {self.url}")
+        # print("play_video")
+        # print(f"url: {self.url}")
         video = None
         while video is None and self._running:
             try:
                 video = pafy.new(self.url)
                 duration = video.duration
                 print(f"Metadata: \n{video}")
-                #pass_infos=[video.title, video.author]
+                # pass_infos=[video.title, video.author]
             except KeyError as error:
                 print("KeyError, Trying again")
                 print(error.with_traceback)
