@@ -59,7 +59,7 @@ def video_action(a_string):
     take_video()
 
 
-def wetter_action():
+def wetter_action(a_string):
     wth = weather("vienna")
     print(f"Das wetter is {wth['weather']}, und es hat {wth['temperature']}  Grad")
     speak(f"Das wetter is {wth['weather']}, und es hat {wth['temperature']}  Grad")
