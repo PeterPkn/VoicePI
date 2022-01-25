@@ -8,7 +8,6 @@ class FaceTracking:
         cascPath = sys.argv[0]
         faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
-
         video_capture = cv2.VideoCapture(0)
 
         while True:
@@ -27,7 +26,6 @@ class FaceTracking:
 
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces:
-                print(x)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
             # TODO prüfen ob werte sich ändern --> wenn ja: gesicht erkannt
