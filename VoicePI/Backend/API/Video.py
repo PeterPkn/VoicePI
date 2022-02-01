@@ -3,15 +3,12 @@ from threading import Thread
 from urllib.error import URLError
 
 import pafy, vlc, time
-import re, requests, subprocess, urllib.parse, urllib.request
-from bs4 import BeautifulSoup
+import re, urllib.parse, urllib.request
 
 from ThreadManager import ThreadManager
 
 th = ThreadManager()
 
-
-# TODO: Rewrite to Class
 
 def find_url(name):
     query_string = urllib.parse.urlencode({"search_query": name})
@@ -93,3 +90,6 @@ class VideoPlayer:
 
         print("stopping player")
         player.stop()
+
+
+VideoPlayer("never gonna give you up").play_video()
