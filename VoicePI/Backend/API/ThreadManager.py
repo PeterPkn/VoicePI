@@ -54,14 +54,3 @@ class ThreadManager:
             print("SUS:")
             thread[1]()
 
-    @staticmethod
-    def AddFaceTrackingThread(func, args, stopTh):
-        th = threading.Thread(target=func, args=args)
-        ThreadManager.VideoThreads.append((th, stopTh))
-        th.start()
-
-    @staticmethod
-    def StopFaceTrackingVideos():
-        for thread in ThreadManager.VideoThreads:
-            print("SUS:")
-            thread[1]()
