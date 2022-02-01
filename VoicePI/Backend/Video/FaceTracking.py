@@ -1,6 +1,8 @@
 import cv2
 import sys
 
+from numpy import empty
+
 
 class FaceTracking:
     @staticmethod
@@ -12,8 +14,10 @@ class FaceTracking:
 
         while True:
             # Capture frame-by-frame
+            print("Test")
             ret, frame = video_capture.read()
-
+            print("read 1")
+            
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
             faces = faceCascade.detectMultiScale(
@@ -28,8 +32,7 @@ class FaceTracking:
             for (x, y, w, h) in faces:
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-            # TODO prüfen ob werte sich ändern --> wenn ja: gesicht erkannt
-            print(x)
+            
             # Display the resulting frame
             cv2.imshow('Facetracking', frame)
 
