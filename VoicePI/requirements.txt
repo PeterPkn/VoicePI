@@ -1,25 +1,13 @@
-#https://realpython.com/python-speech-recognition/#the-recognizer-class
 pyaudio
-#Pyaudio Probleme?: https://stackoverflow.com/questions/52283840/i-cant-install-pyaudio-on-windows-how-to-solve-error-microsoft-visual-c-14
-
-#   Wenn Windows: pip install pipwin    --> pipwin install pyaudio          pipwin install pocketsphinx
-#   wenn es nicht funktioniert: pipwin refresh
-#   line 53 und line 54 im backend_youtube_dl.py package auskommentieren
-
-
-pocketsphinx
-
 SpeechRecognition
-
 pafy
 python-vlc
 youtube_dl
-#bs4 
 requests
 python_weather
 pycamera
 flask
 flask_cors
-
+opencv-python==4.3.0.38
 pvporcupine==2.1.0
 pvrecorder==1.0.2
